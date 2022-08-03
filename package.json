@@ -4,9 +4,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "prepare": "husky install",
     "build": "turbo run build",
-    "clean": "turbo run clean"
+    "clean": "turbo run clean",
+    "prepare": "husky install",
+    "preinstall": "npx only-allow pnpm"
   },
   "engines": {
     "node": "16.x",
