@@ -1,0 +1,14 @@
+{
+  "*.{js,ts,tsx}": [
+    "eslint --fix --cache"
+  ],
+  "*.{json,yml,yaml}": [
+    "pnpm prettier --write"
+  ],
+  "*.prisma": [
+    "prisma format --schema="
+  ],
+  "*.dart": [
+    "flutter format"
+  ]
+}
