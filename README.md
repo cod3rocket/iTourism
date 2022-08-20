@@ -10,9 +10,9 @@
 The guide will contain information about the main tourist attractions, hotels, restaurants, shops and other commercial establishments in the city.
 </p>
 
-<h3 style="display: flex; gap: 4px; justify-content: center">
+<h3 align="center">
   <!-- Version -->
-  <a href="#">
+  <a href="https://github.com/cod3rocket/iTourism/releases">
     <img alt="Realeases url" src="https://img.shields.io/github/v/release/cod3rocket/iTourism?style=for-the-badge&labelColor=1C1E26&color=1764a3">
   </a>  
 
