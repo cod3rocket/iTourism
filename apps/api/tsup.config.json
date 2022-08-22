@@ -1,9 +1,0 @@
-{
-  "format": ["cjs"],
-  "clean": true,
-  "minify": true,
-  "tsconfig": "tsconfig.build.json",
-  "env": {
-    "NODE_ENV": "production"
-  }
-}
