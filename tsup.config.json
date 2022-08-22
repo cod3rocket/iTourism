@@ -1,0 +1,7 @@
+{
+  "format": ["esm", "cjs"],
+  "clean": true,
+  "keepNames": true,
+  "minify": true,
+  "dts": true
+}
