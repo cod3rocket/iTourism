@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  }
+}
