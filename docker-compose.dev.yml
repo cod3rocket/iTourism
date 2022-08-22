@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  postgres:
+    image: bitnami/postgresql:14-debian-11
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/bitnami/postgresql
+    environment:
+      TZ: America/Sao_Paulo
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: itourism
+    networks:
+      - backend
+
+  redis:
+    image: bitnami/redis:7.0-debian-11
+    ports:
+      - 6379:6379
+    volumes:
+      - redis_data:/bitnami/redis/data
+    environment:
+      TZ: America/Sao_Paulo
+      REDIS_PASSWORD: example
+      REDIS_DISABLE_COMMANDS: FLUSHDB,FLUSHALL
+    networks:
+      - backend
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  backend:
