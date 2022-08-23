@@ -6,9 +6,9 @@
     "build": "just build",
     "clean": "just clean",
     "start": "just start",
-    "start:debug": "just start:debug",
-    "start:dev": "just start:dev",
-    "start:prod": "just start:prod"
+    "start:debug": "just start-debug",
+    "start:dev": "just start-dev",
+    "start:prod": "just start-prod"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
