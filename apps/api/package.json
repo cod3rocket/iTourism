@@ -12,6 +12,9 @@
     "start:prod": "just start-prod",
     "prisma:generate": "just prisma:generate"
   },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
     "@nestjs/config": "^2.2.0",
