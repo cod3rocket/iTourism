@@ -10,7 +10,7 @@
     "start:debug": "just start-debug",
     "start:dev": "just start-dev",
     "start:prod": "just start-prod",
-    "prisma:generate": "just prisma:generate"
+    "prisma:generate": "just prisma-generate"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
