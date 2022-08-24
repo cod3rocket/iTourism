@@ -2,5 +2,6 @@
   "extends": "@itourism/tsconfig/nest.json",
   "compilerOptions": {
     "baseUrl": "./src",
+    "outDir": "./dist"
   }
 }

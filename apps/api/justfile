@@ -1,3 +1,5 @@
+bootstrap: prisma-generate
+
 build:
   @pnpm tsup src/main.ts
 
@@ -15,3 +17,6 @@ start-debug:
 
 start-prod:
   @node dist/main
+
+prisma-generate:
+  @pnpm prisma generate
