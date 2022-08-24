@@ -126,6 +126,18 @@ importers:
       '@types/react-dom': 18.0.6
       typescript: 4.7.4
 
+  packages/nestjs:
+    specifiers:
+      '@itourism/tsconfig': workspace:*
+      '@nestjs/common': ^9.0.8
+      '@types/express': ^4.17.13
+      express: ^4.18.1
+    devDependencies:
+      '@itourism/tsconfig': link:../tsconfig
+      '@nestjs/common': 9.0.8_j5hagqx4mwzscud4kyjdvubauy
+      '@types/express': 4.17.13
+      express: 4.18.1
+
   packages/tsconfig:
     specifiers: {}
 
@@ -1291,7 +1303,7 @@ packages:
       '@types/node': 18.6.3
       chalk: 4.1.2
       cosmiconfig: 7.0.1
-      cosmiconfig-typescript-loader: 2.0.2_smanlb2ea34zgff5qlf6r36p5q
+      cosmiconfig-typescript-loader: 2.0.2_rvpff6wczdoburbtnnamj7zzeu
       lodash: 4.17.21
       resolve-from: 5.0.0
       typescript: 4.7.4
@@ -3146,11 +3158,12 @@ packages:
       object-assign: 4.1.1
       vary: 1.1.2
 
-  /cosmiconfig-typescript-loader/2.0.2_smanlb2ea34zgff5qlf6r36p5q:
+  /cosmiconfig-typescript-loader/2.0.2_rvpff6wczdoburbtnnamj7zzeu:
     resolution: {integrity: sha512-KmE+bMjWMXJbkWCeY4FJX/npHuZPNr9XF9q9CIQ/bpFwi1qHfCmSiKarrCcRa0LO4fWjk93pVoeRtJAkTGcYNw==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       '@types/node': '*'
+      cosmiconfig: '>=7'
       typescript: '>=3'
     dependencies:
       '@types/node': 18.6.3

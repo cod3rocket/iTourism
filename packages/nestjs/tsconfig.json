@@ -1,0 +1,6 @@
+{
+  "extends": "@itourism/tsconfig/library.json",
+  "compilerOptions": {
+    "baseUrl": "./lib"
+  }
+}
