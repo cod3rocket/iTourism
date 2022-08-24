@@ -54,6 +54,7 @@ importers:
 
   apps/api:
     specifiers:
+      '@itourism/nestjs': workspace:*
       '@itourism/tsconfig': workspace:*
       '@nestjs/cli': ^9.0.0
       '@nestjs/common': ^9.0.0
@@ -75,6 +76,7 @@ importers:
       tsconfig-paths: 4.0.0
       typescript: ^4.3.5
     dependencies:
+      '@itourism/nestjs': link:../../packages/nestjs
       '@nestjs/common': 9.0.8_j5hagqx4mwzscud4kyjdvubauy
       '@nestjs/config': 2.2.0_t6wygpagnzylhnpg25zual64b4
       '@nestjs/core': 9.0.8_ynoyn6d36ot4yn5mj6f7nnecsq
