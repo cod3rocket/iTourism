@@ -2,15 +2,21 @@
   "cities": [
     {
       "id": "e478d3ca-e4d4-4538-9034-24f06aed99c9",
-      "name": "Brotas"
+      "name": "Brotas",
+      "latitude": -22.282027,
+      "longitude": -48.1280803
     },
     {
       "id": "b7421d93-c0cf-4aff-a57d-2d6527e2ef99",
-      "name": "Torrinha"
+      "name": "Torrinha",
+      "latitude": -22.4350258,
+      "longitude": -48.1801077
     },
     {
       "id": "2be59508-763a-49d2-9883-2e69eab0ddae",
-      "name": "Bandeirantes"
+      "name": "Bandeirantes",
+      "latitude": -23.1103237,
+      "longitude": -50.3729792
     }
   ],
   "events": [

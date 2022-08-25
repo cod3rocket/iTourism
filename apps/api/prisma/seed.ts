@@ -18,6 +18,8 @@ async function seeder() {
         data: {
           id: city.id,
           name: city.name,
+          latitude: city.latitude,
+          longitude: city.longitude,
         },
       });
     }),
