@@ -27,7 +27,9 @@ model user {
 model city {
   id          String       @id @default(uuid()) @db.Uuid
   name        String       @unique
-  event       event[]
+  latitude    Float        @default(0)
+  longitude   Float        @default(0)
+  events      event[]
   attractions attraction[]
   createdAt   DateTime     @default(now())
   updatedAt   DateTime     @updatedAt
@@ -67,6 +69,8 @@ model attraction {
   type        attractionType
   cityId      String         @db.Uuid
   city        city           @relation(fields: [cityId], references: [id])
+  latitude    Float          @default(0)
+  longitude   Float          @default(0)
   banner      String
   gallery     String[]
   description String

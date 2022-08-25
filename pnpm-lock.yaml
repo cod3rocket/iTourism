@@ -24,6 +24,7 @@ importers:
       lint-staged: ^13.0.3
       prettier: ^2.7.1
       tsup: ^6.2.2
+      tsx: ^3.8.2
       turbo: ^1.4.2
       typescript: ^4.7.4
     devDependencies:
@@ -47,11 +48,13 @@ importers:
       lint-staged: 13.0.3
       prettier: 2.7.1
       tsup: 6.2.2_litewngskstwdadyxlilaik57a
+      tsx: 3.8.2
       turbo: 1.4.2
       typescript: 4.7.4
 
   apps/api:
     specifiers:
+      '@itourism/nestjs': workspace:*
       '@itourism/tsconfig': workspace:*
       '@nestjs/cli': ^9.0.0
       '@nestjs/common': ^9.0.0
@@ -63,6 +66,8 @@ importers:
       '@prisma/client': ^4.2.1
       '@types/express': ^4.17.13
       '@types/node': ^16.0.0
+      class-transformer: ^0.5.1
+      class-validator: ^0.13.2
       prisma: ^4.2.1
       reflect-metadata: ^0.1.13
       rimraf: ^3.0.2
@@ -73,11 +78,14 @@ importers:
       tsconfig-paths: 4.0.0
       typescript: ^4.3.5
     dependencies:
-      '@nestjs/common': 9.0.8_j5hagqx4mwzscud4kyjdvubauy
+      '@itourism/nestjs': link:../../packages/nestjs
+      '@nestjs/common': 9.0.8_allg6cauirbqzgqcmexy2wdnoq
       '@nestjs/config': 2.2.0_t6wygpagnzylhnpg25zual64b4
       '@nestjs/core': 9.0.8_ynoyn6d36ot4yn5mj6f7nnecsq
       '@nestjs/platform-express': 9.0.8_cw6o3dkuyuli4a5gq7b223evly
       '@prisma/client': 4.2.1_prisma@4.2.1
+      class-transformer: 0.5.1
+      class-validator: 0.13.2
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       rxjs: 7.5.6
@@ -125,6 +133,18 @@ importers:
       '@types/react': 18.0.15
       '@types/react-dom': 18.0.6
       typescript: 4.7.4
+
+  packages/nestjs:
+    specifiers:
+      '@itourism/tsconfig': workspace:*
+      '@nestjs/common': ^9.0.8
+      '@types/express': ^4.17.13
+      express: ^4.18.1
+    devDependencies:
+      '@itourism/tsconfig': link:../tsconfig
+      '@nestjs/common': 9.0.8_j5hagqx4mwzscud4kyjdvubauy
+      '@types/express': 4.17.13
+      express: 4.18.1
 
   packages/tsconfig:
     specifiers: {}
@@ -1291,7 +1311,7 @@ packages:
       '@types/node': 18.6.3
       chalk: 4.1.2
       cosmiconfig: 7.0.1
-      cosmiconfig-typescript-loader: 2.0.2_smanlb2ea34zgff5qlf6r36p5q
+      cosmiconfig-typescript-loader: 2.0.2_rvpff6wczdoburbtnnamj7zzeu
       lodash: 4.17.21
       resolve-from: 5.0.0
       typescript: 4.7.4
@@ -1509,6 +1529,27 @@ packages:
     resolution: {integrity: sha512-AHPmaAx+RYfZz0eYu6Gviiagpmiyw98ySSlQvCUhVGDRtDFe4DBS0x1bSjdF3gqUDYOczB+yYvBTtEylYSdRhg==}
     dev: false
 
+  /@esbuild-kit/cjs-loader/2.3.3:
+    resolution: {integrity: sha512-Rt4O1mXlPEDVxvjsHLgbtHVdUXYK9C1/6ThpQnt7FaXIjUOsI6qhHYMgALhNnlIMZffag44lXd6Dqgx3xALbpQ==}
+    dependencies:
+      '@esbuild-kit/core-utils': 2.3.0
+      get-tsconfig: 4.2.0
+    dev: true
+
+  /@esbuild-kit/core-utils/2.3.0:
+    resolution: {integrity: sha512-JL73zt/LN/qqziHuod4/bM2xBNNofDZu1cbwT6KIn6B11lA4cgDXkoSHOfNCbZMZOnh0Aqf0vW/gNQC+Z18hKQ==}
+    dependencies:
+      esbuild: 0.15.5
+      source-map-support: 0.5.21
+    dev: true
+
+  /@esbuild-kit/esm-loader/2.4.2:
+    resolution: {integrity: sha512-N9dPKAj8WOx6djVnStgILWXip4fjDcBk9L7azO0/uQDpu8Ee0eaL78mkN4Acid9BzvNAKWwdYXFJZnsVahNEew==}
+    dependencies:
+      '@esbuild-kit/core-utils': 2.3.0
+      get-tsconfig: 4.2.0
+    dev: true
+
   /@esbuild/linux-loong64/0.15.5:
     resolution: {integrity: sha512-UHkDFCfSGTuXq08oQltXxSZmH1TXyWsL+4QhZDWvvLl6mEJQqk3u7/wq1LjhrrAXYIllaTtRSzUXl4Olkf2J8A==}
     engines: {node: '>=12'}
@@ -1683,6 +1724,30 @@ packages:
       - webpack-cli
     dev: true
 
+  /@nestjs/common/9.0.8_allg6cauirbqzgqcmexy2wdnoq:
+    resolution: {integrity: sha512-x6+qGRnTEZmg0jzqPUW8uPCK6qPjc7JGmeHszZOso1YCCKNiqaCM4NY6ndbl2Of3kWSpq3qE4thCmuZ/4DwBQA==}
+    peerDependencies:
+      cache-manager: '*'
+      class-transformer: '*'
+      class-validator: '*'
+      reflect-metadata: ^0.1.12
+      rxjs: ^7.1.0
+    peerDependenciesMeta:
+      cache-manager:
+        optional: true
+      class-transformer:
+        optional: true
+      class-validator:
+        optional: true
+    dependencies:
+      class-transformer: 0.5.1
+      class-validator: 0.13.2
+      iterare: 1.2.1
+      reflect-metadata: 0.1.13
+      rxjs: 7.5.6
+      tslib: 2.4.0
+      uuid: 8.3.2
+
   /@nestjs/common/9.0.8_j5hagqx4mwzscud4kyjdvubauy:
     resolution: {integrity: sha512-x6+qGRnTEZmg0jzqPUW8uPCK6qPjc7JGmeHszZOso1YCCKNiqaCM4NY6ndbl2Of3kWSpq3qE4thCmuZ/4DwBQA==}
     peerDependencies:
@@ -1704,6 +1769,7 @@ packages:
       rxjs: 7.5.6
       tslib: 2.4.0
       uuid: 8.3.2
+    dev: true
 
   /@nestjs/config/2.2.0_t6wygpagnzylhnpg25zual64b4:
     resolution: {integrity: sha512-78Eg6oMbCy3D/YvqeiGBTOWei1Jwi3f2pSIZcZ1QxY67kYsJzTRTkwRT8Iv30DbK0sGKc1mcloDLD5UXgZAZtg==}
@@ -1712,7 +1778,7 @@ packages:
       reflect-metadata: ^0.1.13
       rxjs: ^6.0.0 || ^7.2.0
     dependencies:
-      '@nestjs/common': 9.0.8_j5hagqx4mwzscud4kyjdvubauy
+      '@nestjs/common': 9.0.8_allg6cauirbqzgqcmexy2wdnoq
       dotenv: 16.0.1
       dotenv-expand: 8.0.3
       lodash: 4.17.21
@@ -1739,7 +1805,7 @@ packages:
       '@nestjs/websockets':
         optional: true
     dependencies:
-      '@nestjs/common': 9.0.8_j5hagqx4mwzscud4kyjdvubauy
+      '@nestjs/common': 9.0.8_allg6cauirbqzgqcmexy2wdnoq
       '@nestjs/platform-express': 9.0.8_cw6o3dkuyuli4a5gq7b223evly
       '@nuxtjs/opencollective': 0.3.2
       fast-safe-stringify: 2.1.1
@@ -1759,7 +1825,7 @@ packages:
       '@nestjs/common': ^9.0.0
       '@nestjs/core': ^9.0.0
     dependencies:
-      '@nestjs/common': 9.0.8_j5hagqx4mwzscud4kyjdvubauy
+      '@nestjs/common': 9.0.8_allg6cauirbqzgqcmexy2wdnoq
       '@nestjs/core': 9.0.8_ynoyn6d36ot4yn5mj6f7nnecsq
       body-parser: 1.20.0
       cors: 2.8.5
@@ -1797,7 +1863,7 @@ packages:
       '@nestjs/platform-express':
         optional: true
     dependencies:
-      '@nestjs/common': 9.0.8_j5hagqx4mwzscud4kyjdvubauy
+      '@nestjs/common': 9.0.8_allg6cauirbqzgqcmexy2wdnoq
       '@nestjs/core': 9.0.8_ynoyn6d36ot4yn5mj6f7nnecsq
       '@nestjs/platform-express': 9.0.8_cw6o3dkuyuli4a5gq7b223evly
       tslib: 2.4.0
@@ -2947,6 +3013,15 @@ packages:
     engines: {node: '>=6.0'}
     dev: true
 
+  /class-transformer/0.5.1:
+    resolution: {integrity: sha512-SQa1Ws6hUbfC98vKGxZH3KFY0Y1lm5Zm0SY8XX9zbK7FJCyVEac3ATW0RIpwzW+oOfmHE5PMPufDG9hCfoEOMw==}
+
+  /class-validator/0.13.2:
+    resolution: {integrity: sha512-yBUcQy07FPlGzUjoLuUfIOXzgynnQPPruyK1Ge2B74k9ROwnle1E+NxLWnUv5OLU8hA/qL5leAE9XnXq3byaBw==}
+    dependencies:
+      libphonenumber-js: 1.10.13
+      validator: 13.7.0
+
   /clean-stack/2.2.0:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
     engines: {node: '>=6'}
@@ -3146,11 +3221,12 @@ packages:
       object-assign: 4.1.1
       vary: 1.1.2
 
-  /cosmiconfig-typescript-loader/2.0.2_smanlb2ea34zgff5qlf6r36p5q:
+  /cosmiconfig-typescript-loader/2.0.2_rvpff6wczdoburbtnnamj7zzeu:
     resolution: {integrity: sha512-KmE+bMjWMXJbkWCeY4FJX/npHuZPNr9XF9q9CIQ/bpFwi1qHfCmSiKarrCcRa0LO4fWjk93pVoeRtJAkTGcYNw==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       '@types/node': '*'
+      cosmiconfig: '>=7'
       typescript: '>=3'
     dependencies:
       '@types/node': 18.6.3
@@ -4351,6 +4427,10 @@ packages:
       get-intrinsic: 1.1.2
     dev: true
 
+  /get-tsconfig/4.2.0:
+    resolution: {integrity: sha512-X8u8fREiYOE6S8hLbq99PeykTDoLVnxvF4DjWKJmz9xy2nNRdUcV8ZN9tniJFeKyTU3qnC9lL8n4Chd6LmVKHg==}
+    dev: true
+
   /git-raw-commits/2.0.11:
     resolution: {integrity: sha512-VnctFhw+xfj8Va1xtfEqCUD2XDrbAPSJx+hSrE5K7fGdjZruW7XV+QOrN7LF/RJyvspRiD2I0asWsxFp0ya26A==}
     engines: {node: '>=10'}
@@ -4908,6 +4988,9 @@ packages:
       prelude-ls: 1.2.1
       type-check: 0.4.0
     dev: true
+
+  /libphonenumber-js/1.10.13:
+    resolution: {integrity: sha512-b74iyWmwb4GprAUPjPkJ11GTC7KX4Pd3onpJfKxYyY8y9Rbb4ERY47LvCMEDM09WD3thiLDMXtkfDK/AX+zT7Q==}
 
   /lilconfig/2.0.5:
     resolution: {integrity: sha512-xaYmXZtTHPAw5m+xLN8ab9C+3a8YmV3asNSPOATITbtwrfbwaLJj8h66H1WMIpALCkqsIzK3h7oQ+PdX+LQ9Eg==}
@@ -6685,6 +6768,17 @@ packages:
       typescript: 4.7.4
     dev: true
 
+  /tsx/3.8.2:
+    resolution: {integrity: sha512-Jf9izq3Youry5aEarspf6Gm+v/IE2A2xP7YVhtNH1VSCpM0jjACg7C3oD5rIoLBfXWGJSZj4KKC2bwE0TgLb2Q==}
+    hasBin: true
+    dependencies:
+      '@esbuild-kit/cjs-loader': 2.3.3
+      '@esbuild-kit/core-utils': 2.3.0
+      '@esbuild-kit/esm-loader': 2.4.2
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
   /turbo-android-arm64/1.4.2:
     resolution: {integrity: sha512-h6PorJ+muKDQE3wETwrkx3NpqypAxjIFLP3b8RQaAoNvxYa1JTSC71VMtYxMbwuDk58A1KGbXLDteR4by8Lqew==}
     cpu: [arm64]
@@ -6964,6 +7058,10 @@ packages:
       spdx-correct: 3.1.1
       spdx-expression-parse: 3.0.1
     dev: true
+
+  /validator/13.7.0:
+    resolution: {integrity: sha512-nYXQLCBkpJ8X6ltALua9dRrZDHVYxjJ1wgskNt1lH9fzGjs3tgojGSCBjmEPwkWS1y29+DrizMTW19Pr9uB2nw==}
+    engines: {node: '>= 0.10'}
 
   /vary/1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}

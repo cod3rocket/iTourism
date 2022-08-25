@@ -10,6 +10,7 @@
     "tsconfig/next.json": "tsconfig"
   },
   "material-icon-theme.folders.associations": {
-    "tsconfig": "typescript"
+    "tsconfig": "typescript",
+    "nestjs": "api"
   }
 }
