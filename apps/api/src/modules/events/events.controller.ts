@@ -1,11 +1,18 @@
 import { Paginator, UsePaginator } from '@itourism/nestjs';
-import { Controller, Get, Query } from '@nestjs/common';
+import {
+  CacheInterceptor,
+  Controller,
+  Get,
+  Query,
+  UseInterceptors,
+} from '@nestjs/common';
 import { isUUID } from 'class-validator';
 import { EventModel } from 'models/event.model';
 
 import { EventsService } from './events.service';
 
 @Controller('events')
+@UseInterceptors(CacheInterceptor)
 export class EventsController {
   constructor(private readonly eventsService: EventsService) {}
 
