@@ -1,10 +1,18 @@
 import { Paginator, UsePaginator } from '@itourism/nestjs';
-import { Controller, Get, Param, Query } from '@nestjs/common';
+import {
+  CacheInterceptor,
+  Controller,
+  Get,
+  Param,
+  Query,
+  UseInterceptors,
+} from '@nestjs/common';
 import { AttractionModel, AttractionType } from 'models/attraction.model';
 
 import { AttractionsService } from './attractions.service';
 
 @Controller('attractions')
+@UseInterceptors(CacheInterceptor)
 export class AttractionsController {
   constructor(private readonly attractionsService: AttractionsService) {}
 
