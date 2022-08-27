@@ -7,7 +7,8 @@ import {
   Query,
   UseInterceptors,
 } from '@nestjs/common';
-import { AttractionModel, AttractionType } from 'models/attraction.model';
+import { AttractionModel } from 'models/attraction.model';
+import type { AttractionType } from 'models/attraction.model';
 
 import { AttractionsService } from './attractions.service';
 
