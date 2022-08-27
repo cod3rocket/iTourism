@@ -1,0 +1,23 @@
+bootstrap: prisma-generate
+
+build: prisma-generate
+  @pnpm tsup src/main.ts
+  
+clean:
+  @pnpm rimraf dist .turbo
+
+start:
+  @pnpm nest start
+
+start-dev:
+  @pnpm nest start --watch
+
+start-debug:
+  @pnpm nest start --debug --watch
+
+start-prod:
+  @pnpm prisma migrate deploy
+  @node dist/main
+
+prisma-generate:
+  @pnpm prisma generate

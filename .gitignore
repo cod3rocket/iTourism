@@ -25,3 +25,7 @@ pubspec.lock
 
 # Tools
 .eslintcache
+
+# Production
+dist
+.next

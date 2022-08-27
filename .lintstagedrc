@@ -6,7 +6,7 @@
     "pnpm prettier --write"
   ],
   "*.prisma": [
-    "prisma format --schema="
+    "pnpm --filter @itourism/api prisma format --schema="
   ],
   "*.dart": [
     "flutter format"

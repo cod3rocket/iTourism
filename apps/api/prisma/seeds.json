@@ -1,0 +1,110 @@
+{
+  "cities": [
+    {
+      "id": "e478d3ca-e4d4-4538-9034-24f06aed99c9",
+      "name": "Brotas",
+      "latitude": -22.282027,
+      "longitude": -48.1280803
+    },
+    {
+      "id": "b7421d93-c0cf-4aff-a57d-2d6527e2ef99",
+      "name": "Torrinha",
+      "latitude": -22.4350258,
+      "longitude": -48.1801077
+    },
+    {
+      "id": "2be59508-763a-49d2-9883-2e69eab0ddae",
+      "name": "Bandeirantes",
+      "latitude": -23.1103237,
+      "longitude": -50.3729792
+    }
+  ],
+  "events": [
+    {
+      "id": "afcd6e77-d029-4ffb-942c-2cbcba08def0",
+      "name": "Festa de Santa Cruz",
+      "cityId": "e478d3ca-e4d4-4538-9034-24f06aed99c9",
+      "banner": "https://static.itourism.app/uploads/db0bccf1-2eb6-4cd5-968c-0561dc344f69.jpg",
+      "gallery": [
+        "https://static.itourism.app/uploads/4fcace1f-bed0-46f6-a881-a5cd729868f4.jpeg",
+        "https://static.itourism.app/uploads/64e11f4a-9850-4637-9dcc-b076ca175575.jpg"
+      ],
+      "description": "A Festa de Santa Cruz está chegando! É quando o Largo da Santa Cruz se transforma e vira palco de uma das quermesses mais famosas da região. Além das comidas típicas, das barraquinhas, a festa vira ponto de encontro da população. Lá muitas pessoas acabam encontrando aquele parente distante ou um amigo que não está mais em Brotas. Entretanto, resolve visitar a cidade nesses dias, justamente pela festa.",
+      "address": "",
+      "map": ""
+    },
+    {
+      "id": "1c02a977-8be6-46d5-b78d-36ab2b8a5657",
+      "name": "Evento 1",
+      "cityId": "b7421d93-c0cf-4aff-a57d-2d6527e2ef99",
+      "banner": "https://static.itourism.app/uploads/db0bccf1-2eb6-4cd5-968c-0561dc344f69.jpg",
+      "gallery": [
+        "https://static.itourism.app/uploads/4fcace1f-bed0-46f6-a881-a5cd729868f4.jpeg",
+        "https://static.itourism.app/uploads/64e11f4a-9850-4637-9dcc-b076ca175575.jpg"
+      ],
+      "description": "In volutpat lorem a lacinia facilisis. Integer porttitor, tellus eu cursus tempor, sem est lobortis mi, id elementum enim lorem eget lectus. Fusce bibendum, nibh vitae venenatis pharetra, eros nisl consequat ante, non interdum arcu nisi eget lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus at diam nec velit malesuada elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar neque vitae mauris semper, sit amet consectetur nulla sollicitudin. Vivamus ac risus quis ante ullamcorper molestie sit amet quis sapien. Ut elementum et sem a varius. Praesent eu rhoncus ex. ",
+      "address": "",
+      "map": ""
+    },
+    {
+      "id": "2f000c1e-a265-4f9d-830b-dc5021ad5bea",
+      "name": "Evento 2",
+      "cityId": "2be59508-763a-49d2-9883-2e69eab0ddae",
+      "banner": "https://static.itourism.app/uploads/db0bccf1-2eb6-4cd5-968c-0561dc344f69.jpg",
+      "gallery": [
+        "https://static.itourism.app/uploads/4fcace1f-bed0-46f6-a881-a5cd729868f4.jpeg",
+        "https://static.itourism.app/uploads/64e11f4a-9850-4637-9dcc-b076ca175575.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis libero id dui faucibus imperdiet. Aenean eget urna efficitur, pellentesque nisl non, interdum erat. Fusce suscipit finibus cursus. Nunc eget scelerisque risus, nec tempor lectus. Nullam eu interdum ante. Donec dictum pretium dui id accumsan. Duis laoreet eros ante, sed feugiat lorem ultrices in. In quis mauris cursus, facilisis lorem id, sagittis quam. Sed efficitur erat et hendrerit porttitor. Fusce at quam quis ex laoreet tristique sit amet nec enim. Curabitur non enim ligula. Mauris et quam tellus. Vivamus id rhoncus neque. Etiam sit amet feugiat diam, sed lobortis velit.",
+      "address": "",
+      "map": ""
+    }
+  ],
+  "eventSchedule": [
+    {
+      "id": "52437440-b93e-4071-b04f-51e42c043c83",
+      "eventId": "afcd6e77-d029-4ffb-942c-2cbcba08def0",
+      "date": "Mon Oct 10 2022 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    },
+    {
+      "id": "a2cbdd19-f965-4c0c-838e-546850957a5a",
+      "eventId": "afcd6e77-d029-4ffb-942c-2cbcba08def0",
+      "date": "Tue Oct 11 2022 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    },
+    {
+      "id": "81d21238-7cce-460e-ad02-da8666d76c04",
+      "eventId": "afcd6e77-d029-4ffb-942c-2cbcba08def0",
+      "date": "Wed Oct 12 2022 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    },
+    {
+      "id": "29681381-17bf-4ca2-a3fe-d43228c5b7dd",
+      "eventId": "1c02a977-8be6-46d5-b78d-36ab2b8a5657",
+      "date": "Mon Oct 10 2022 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    },
+    {
+      "id": "41795b38-3c9c-48db-a5f9-787c9404fe53",
+      "eventId": "1c02a977-8be6-46d5-b78d-36ab2b8a5657",
+      "date": "Tue Oct 11 2022 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    },
+    {
+      "id": "b6fd4241-fca0-4e4f-a9f6-3686d51ca8d1",
+      "eventId": "1c02a977-8be6-46d5-b78d-36ab2b8a5657",
+      "date": "Wed Oct 12 2022 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    },
+    {
+      "id": "48e14840-d7ca-4bc5-925f-10eebcf27241",
+      "eventId": "2f000c1e-a265-4f9d-830b-dc5021ad5bea",
+      "date": "Mon Oct 10 2022 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    },
+    {
+      "id": "da56ddda-fb4f-4bb3-9477-55cb16a49a5e",
+      "eventId": "2f000c1e-a265-4f9d-830b-dc5021ad5bea",
+      "date": "Tue Oct 11 2022 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    },
+    {
+      "id": "b220276a-23e7-4542-936d-1f041e4d3563",
+      "eventId": "2f000c1e-a265-4f9d-830b-dc5021ad5bea",
+      "date": "Wed Oct 12 2022 00:00:00 GMT+0000 (Coordinated Universal Time)"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum role {
+  admin
+  user
+}
+
+model user {
+  id        String   @id @default(uuid()) @db.Uuid
+  name      String
+  email     String   @unique
+  password  String
+  role      role     @default(user)
+  rate      rate[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model city {
+  id          String       @id @default(uuid()) @db.Uuid
+  name        String       @unique
+  latitude    Float        @default(0)
+  longitude   Float        @default(0)
+  events      event[]
+  attractions attraction[]
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+}
+
+enum contactInfoType {
+  phone
+  email
+  website
+  whatsapp
+  facebook
+  instagram
+}
+
+model contactInfo {
+  id           String          @id @default(uuid()) @db.Uuid
+  type         contactInfoType
+  value        String
+  attractionId String?         @db.Uuid
+  attraction   attraction?     @relation(fields: [attractionId], references: [id])
+  eventId      String?         @db.Uuid
+  event        event?          @relation(fields: [eventId], references: [id])
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+}
+
+enum attractionType {
+  hotel
+  attraction
+  restaurants
+  bars
+}
+
+model attraction {
+  id          String         @id @default(uuid()) @db.Uuid
+  name        String         @unique
+  type        attractionType
+  cityId      String         @db.Uuid
+  city        city           @relation(fields: [cityId], references: [id])
+  latitude    Float          @default(0)
+  longitude   Float          @default(0)
+  banner      String
+  gallery     String[]
+  description String
+  address     String
+  map         String
+  rate        Float          @default(0)
+  usersRate   rate[]
+  contactInfo contactInfo[]
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+model rate {
+  id           String     @id @default(uuid()) @db.Uuid
+  userId       String     @db.Uuid
+  user         user       @relation(fields: [userId], references: [id])
+  attractionId String     @db.Uuid
+  attraction   attraction @relation(fields: [attractionId], references: [id])
+  comment      String
+  rate         Float      @default(0)
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
+
+model event {
+  id          String          @id @default(uuid()) @db.Uuid
+  name        String          @unique
+  cityId      String          @db.Uuid
+  city        city            @relation(fields: [cityId], references: [id])
+  banner      String
+  gallery     String[]
+  description String
+  address     String
+  map         String
+  contactInfo contactInfo[]
+  schedule    eventSchedule[]
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+}
+
+model eventSchedule {
+  id        String   @id @default(uuid()) @db.Uuid
+  eventId   String   @db.Uuid
+  event     event    @relation(fields: [eventId], references: [id])
+  date      DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

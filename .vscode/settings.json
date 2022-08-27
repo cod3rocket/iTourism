@@ -1,3 +1,17 @@
 {
-  "dart.runPubGetOnPubspecChanges": false
+  "dart.runPubGetOnPubspecChanges": false,
+  "material-icon-theme.activeIconPack": "nest",
+  "material-icon-theme.files.associations": {
+    "justfile": "makefile",
+    "tsconfig/base.json": "tsconfig",
+    "tsconfig/library-react.json": "tsconfig",
+    "tsconfig/library.json": "tsconfig",
+    "tsconfig/nest.json": "tsconfig",
+    "tsconfig/next.json": "tsconfig"
+  },
+  "material-icon-theme.folders.associations": {
+    "tsconfig": "typescript",
+    "nestjs": "api",
+    "attractions": "cart"
+  }
 }

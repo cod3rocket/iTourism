@@ -4,10 +4,12 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "clean": "turbo run clean",
-    "prepare": "husky install",
-    "preinstall": "npx only-allow pnpm"
+    "bootstrap": "just bootstrap",
+    "build": "just build",
+    "build:api": "just build-api",
+    "clean": "just clean",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install"
   },
   "engines": {
     "node": "16.x",
@@ -16,6 +18,8 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@itourism/tsconfig": "workspace:*",
+    "@swc/core": "^1.2.241",
     "@typescript-eslint/eslint-plugin": "^5.32.0",
     "@typescript-eslint/parser": "^5.32.0",
     "eslint": "^8.21.0",
@@ -31,6 +35,8 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
+    "tsup": "^6.2.2",
+    "tsx": "^3.8.2",
     "turbo": "^1.4.2",
     "typescript": "^4.7.4"
   }
