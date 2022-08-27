@@ -6,6 +6,9 @@ bootstrap:
 build:
   @pnpm turbo run build
 
+build-api:
+  @pnpm turbo run build --filter=...@itourism/api
+
 clean:
   @pnpm turbo run clean
 
