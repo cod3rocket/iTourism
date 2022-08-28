@@ -17,7 +17,7 @@ class AppWidget extends StatelessWidget {
       title: 'iTourism',
       builder: Asuka.builder,
       debugShowCheckedModeBanner: false,
-      theme: StarbaseTheme.light,
+      theme: StarbaseTheme.dark,
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
     );
