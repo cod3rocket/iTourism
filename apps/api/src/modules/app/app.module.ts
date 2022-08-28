@@ -5,6 +5,7 @@ import { AppCacheModule } from 'infra/cache/cache.module';
 import { AppConfigModule } from 'infra/config/config.module';
 import { AppThrottlerModule } from 'infra/throttler/throttler.module';
 import { AttractionsModule } from 'modules/attractions/attractions.module';
+import { CitiesModule } from 'modules/cities/cities.module';
 import { EventsModule } from 'modules/events/events.module';
 
 @Module({
@@ -14,6 +15,7 @@ import { EventsModule } from 'modules/events/events.module';
     AppThrottlerModule,
     EventsModule,
     AttractionsModule,
+    CitiesModule,
   ],
   providers: [
     {

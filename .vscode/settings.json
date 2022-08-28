@@ -12,6 +12,7 @@
   "material-icon-theme.folders.associations": {
     "tsconfig": "typescript",
     "nestjs": "api",
-    "attractions": "cart"
+    "attractions": "cart",
+    "cities": "home"
   }
 }
