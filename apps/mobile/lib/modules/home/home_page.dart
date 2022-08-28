@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:itourism_mobile/infra/notifications/models/send_notificaton_dto.dart';
+import 'package:itourism_mobile/infra/notifications/notification_service.dart';
 import 'package:itourism_mobile/modules/home/home_controller.dart';
 
 class HomePage extends StatelessWidget {
   final HomeController homeController = Modular.get<HomeController>();
+  final NotificationService notificationService =
+      Modular.get<NotificationService>();
 
   HomePage({
     Key? key,
@@ -23,7 +27,16 @@ class HomePage extends StatelessWidget {
         }),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: homeController.increment,
+        onPressed: () {
+          homeController.increment();
+          notificationService.sendNotification(
+            SendNotificationModel(
+              title: 'Teste',
+              body: 'Salve Salve Familia!',
+              topic: 'Teste',
+            ),
+          );
+        },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),

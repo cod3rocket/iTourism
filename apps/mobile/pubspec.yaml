@@ -14,6 +14,7 @@ dependencies:
   mobx: ^2.0.7+5
   flutter_mobx: ^2.0.6+1
   asuka: ^2.0.1
+  flutter_local_notifications: ^9.8.0+1
   flutter:
     sdk: flutter
 
