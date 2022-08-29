@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:itourism_mobile/infra/notifications/notification_service.dart';
+import 'package:itourism_mobile/infra/notification/notification_service.dart';
 import 'package:itourism_mobile/modules/home/home_module.dart';
 
 class AppModule extends Module {

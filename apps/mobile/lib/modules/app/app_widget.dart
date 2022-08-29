@@ -14,10 +14,10 @@ class AppWidget extends StatelessWidget {
     Modular.setInitialRoute('/home');
     Modular.setObservers([Asuka.asukaHeroController]);
     return MaterialApp.router(
-      title: 'iToursim',
+      title: 'iTourism',
       builder: Asuka.builder,
       debugShowCheckedModeBanner: false,
-      theme: StarbaseTheme.light,
+      theme: StarbaseTheme.dark,
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
     );

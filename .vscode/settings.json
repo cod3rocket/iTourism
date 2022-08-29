@@ -1,4 +1,5 @@
 {
+  "cSpell.words": ["asuka", "itourism", "starbase"],
   "dart.runPubGetOnPubspecChanges": false,
   "material-icon-theme.activeIconPack": "nest",
   "material-icon-theme.files.associations": {
@@ -10,9 +11,9 @@
     "tsconfig/next.json": "tsconfig"
   },
   "material-icon-theme.folders.associations": {
-    "tsconfig": "typescript",
-    "nestjs": "api",
     "attractions": "cart",
-    "cities": "home"
+    "cities": "home",
+    "nestjs": "api",
+    "tsconfig": "typescript"
   }
 }

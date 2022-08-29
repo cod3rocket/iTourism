@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:itourism_mobile/infra/notifications/models/send_notificaton_dto.dart';
-import 'package:itourism_mobile/infra/notifications/notification_service.dart';
+import 'package:itourism_mobile/infra/notification/models/send_notification_model.dart';
+import 'package:itourism_mobile/infra/notification/notification_service.dart';
 import 'package:itourism_mobile/modules/home/home_controller.dart';
 
 class HomePage extends StatelessWidget {

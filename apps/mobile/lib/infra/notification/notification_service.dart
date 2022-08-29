@@ -1,6 +1,6 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-import 'models/send_notificaton_dto.dart';
+import 'models/send_notification_model.dart';
 
 class NotificationService {
   final FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin =
