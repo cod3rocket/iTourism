@@ -1,6 +1,9 @@
-import { PrismaPaginator, serializeCollection } from '@itourism/nestjs';
+import {
+  NotFoundError,
+  PrismaPaginator,
+  serializeCollection,
+} from '@itourism/nestjs';
 import { Injectable } from '@nestjs/common';
-import { NotFoundError } from 'errors/not-found.error';
 import { PrismaService } from 'infra/prisma/prisma.service';
 import { AttractionModel } from 'models/attraction.model';
 import type { AttractionType } from 'models/attraction.model';
