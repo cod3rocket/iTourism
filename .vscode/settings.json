@@ -1,6 +1,9 @@
 {
   "cSpell.words": ["asuka", "itourism", "starbase"],
   "dart.runPubGetOnPubspecChanges": false,
+  "files.exclude": {
+    "**/*.g.dart": true
+  },
   "material-icon-theme.activeIconPack": "nest",
   "material-icon-theme.files.associations": {
     "justfile": "makefile",
