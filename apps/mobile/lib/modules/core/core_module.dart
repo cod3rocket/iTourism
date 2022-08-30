@@ -11,6 +11,6 @@ class CoreModule extends Module {
           export: true,
         ),
         Bind.lazySingleton((i) => NotificationService(), export: true),
-        Bind.lazySingleton((i) => ApiClient(), export: true),
+        Bind.lazySingleton((i) => ApiClient.createApi(), export: true),
       ];
 }
