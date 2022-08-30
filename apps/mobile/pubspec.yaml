@@ -16,6 +16,7 @@ dependencies:
   asuka: ^2.0.1
   flutter_local_notifications: ^9.8.0+1
   shared_preferences: ^2.0.15
+  dio: ^4.0.6
   flutter:
     sdk: flutter
 
