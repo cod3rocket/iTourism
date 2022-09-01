@@ -17,7 +17,14 @@
 # Package managers
 node_modules
 *.iml
+
+# Flutter/Dart/Pub related
 pubspec.lock
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
 
 # Dev
 .env
