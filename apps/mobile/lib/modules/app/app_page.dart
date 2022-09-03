@@ -5,13 +5,14 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:itourism_mobile/modules/app/app_controller.dart';
 
 class AppPage extends StatelessWidget {
-  const AppPage({
+  final AppController appController = Modular.get<AppController>();
+
+  AppPage({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final AppController appController = Modular.get<AppController>();
     return Scaffold(
       body: const RouterOutlet(),
       bottomNavigationBar: Observer(

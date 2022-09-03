@@ -23,7 +23,7 @@ class AppModule extends Module {
   List<ModularRoute> get routes => [
         ChildRoute(
           '/',
-          child: (_, args) => const AppPage(),
+          child: (_, args) => AppPage(),
           children: [
             ModuleRoute('/attractions', module: AttractionsModule()),
             ModuleRoute(
