@@ -1,7 +1,6 @@
+import 'package:itourism_mobile/modules/events/models/event_model.dart';
 import 'package:itourism_mobile/modules/events/repositories/event_repository.dart';
 import 'package:mobx/mobx.dart';
-
-import '../models/event_model.dart';
 
 part 'events_controller.g.dart';
 

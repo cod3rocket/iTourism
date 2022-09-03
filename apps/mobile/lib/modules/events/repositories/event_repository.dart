@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
-
-import '../models/event_model.dart';
+import 'package:itourism_mobile/modules/events/models/event_model.dart';
 
 class EventsRepository {
   final Dio apiClient;
