@@ -9,6 +9,7 @@ environment:
   sdk: '>=2.17.6 <3.0.0'
 
 dependencies:
+  firebase_core: ^1.21.1
   starbase: any
   flutter_modular: ^5.0.3
   mobx: ^2.0.7+5
