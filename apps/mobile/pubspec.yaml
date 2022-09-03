@@ -18,6 +18,7 @@ dependencies:
   shared_preferences: ^2.0.15
   json_annotation: ^4.6.0
   dio: ^4.0.6
+  google_maps_flutter: ^2.2.0
   flutter:
     sdk: flutter
 
@@ -31,3 +32,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/json/
