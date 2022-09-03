@@ -13,20 +13,24 @@ class AppModule extends Module {
   List<Module> get imports => [
         CoreModule(),
         AttractionsModule(),
+        EventsModule(),
       ];
 
   @override
   final List<Bind> binds = [
-    Bind.factory((i) => AppController()),
+    Bind.singleton((i) => AppController()),
   ];
 
   @override
   List<ModularRoute> get routes => [
         ChildRoute(
           '/',
-          child: (_, args) => const AppPage(),
+          child: (_, args) => AppPage(),
           children: [
-            ModuleRoute('/attractions', module: AttractionsModule()),
+            ModuleRoute(
+              '/attractions',
+              module: AttractionsModule(),
+            ),
             ModuleRoute(
               '/events',
               module: EventsModule(),

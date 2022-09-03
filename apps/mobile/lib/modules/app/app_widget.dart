@@ -12,7 +12,7 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Modular.setInitialRoute('/attractions');
+    Modular.setInitialRoute('/attractions/');
     Modular.setObservers([Asuka.asukaHeroController]);
 
     return FutureBuilder(
