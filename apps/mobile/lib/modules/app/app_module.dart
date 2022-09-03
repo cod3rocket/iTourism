@@ -16,7 +16,7 @@ class AppModule extends Module {
 
   @override
   final List<Bind> binds = [
-    Bind.factory((i) => AppController()),
+    Bind.singleton((i) => AppController()),
   ];
 
   @override
