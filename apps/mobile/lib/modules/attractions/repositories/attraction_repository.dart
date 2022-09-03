@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:itourism_mobile/modules/attractions/models/attraction_model.dart';
+
+import '../models/attraction_model.dart';
 
 class AttractionsRepository {
   final Dio apiClient;

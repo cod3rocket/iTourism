@@ -1,6 +1,7 @@
-import 'package:itourism_mobile/modules/attractions/models/attraction_model.dart';
 import 'package:itourism_mobile/modules/attractions/repositories/attraction_repository.dart';
 import 'package:mobx/mobx.dart';
+
+import '../models/attraction_model.dart';
 
 part 'attractions_controller.g.dart';
 

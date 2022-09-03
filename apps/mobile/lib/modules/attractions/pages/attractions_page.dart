@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:itourism_mobile/modules/attractions/controllers/attractions_controller.dart';
 import 'package:starbase/starbase.dart';
+
+import '../controllers/attractions_controller.dart';
 
 class AttractionsPage extends StatelessWidget {
   const AttractionsPage({Key? key}) : super(key: key);
