@@ -9,7 +9,7 @@ class EventsModule extends Module {
   @override
   List<Bind> get binds => [
         Bind.lazySingleton((i) => EventsRepository(i())),
-        Bind.lazySingleton((i) => EventsController(i())),
+        Bind.lazySingleton((i) => EventsController(i()), export: true),
       ];
 
   @override

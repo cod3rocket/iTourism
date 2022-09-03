@@ -12,6 +12,7 @@ class AppModule extends Module {
   @override
   List<Module> get imports => [
         CoreModule(),
+        EventsModule(),
       ];
 
   @override
@@ -25,7 +26,10 @@ class AppModule extends Module {
           '/',
           child: (_, args) => AppPage(),
           children: [
-            ModuleRoute('/attractions', module: AttractionsModule()),
+            ModuleRoute(
+              '/attractions',
+              module: AttractionsModule(),
+            ),
             ModuleRoute(
               '/events',
               module: EventsModule(),
