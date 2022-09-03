@@ -16,7 +16,7 @@ class EventsModule extends Module {
   List<ModularRoute> get routes => [
         ChildRoute(
           '/',
-          child: (_, args) => const EventsPage(),
+          child: (_, args) => EventsPage(),
           transition: TransitionType.fadeIn,
         ),
         ChildRoute(

@@ -6,12 +6,12 @@ import 'package:itourism_mobile/modules/events/controllers/events_controller.dar
 import 'package:starbase/starbase.dart';
 
 class EventsPage extends StatelessWidget {
-  const EventsPage({Key? key}) : super(key: key);
+  final EventsController eventsController = Modular.get<EventsController>();
+
+  EventsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final EventsController eventsController = Modular.get<EventsController>();
-
     return Scaffold(
         appBar: AppBar(
           title: const Text('Eventos'),
