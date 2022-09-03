@@ -21,19 +21,19 @@ class AttractionsCarousel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _theme = Theme.of(context);
+    final theme = Theme.of(context);
 
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: _borderRadius,
-        ),
-        margin: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 4,
-        ),
-        width: 298,
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: _borderRadius,
+      ),
+      margin: const EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: 4,
+      ),
+      width: 298,
+      child: InkWell(
+        onTap: onTap,
         child: Stack(
           children: [
             ClipRRect(
@@ -72,7 +72,7 @@ class AttractionsCarousel extends StatelessWidget {
                 padding: const EdgeInsets.all(12.0),
                 child: Text(
                   title,
-                  style: _theme.textTheme.titleLarge!.copyWith(
+                  style: theme.textTheme.titleLarge!.copyWith(
                     color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -90,7 +90,7 @@ class AttractionsCarousel extends StatelessWidget {
                 ),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: _theme.primaryColor.withOpacity(0.7),
+                    color: theme.primaryColor.withOpacity(0.7),
                     borderRadius: const BorderRadius.all(
                       Radius.circular(8),
                     ),
@@ -104,13 +104,13 @@ class AttractionsCarousel extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.star,
-                          size: _theme.iconTheme.size,
-                          color: _theme.iconTheme.color,
+                          size: theme.iconTheme.size,
+                          color: theme.iconTheme.color,
                         ),
                         const SizedBox(width: 8),
                         Text(
                           rate.toDouble().toString(),
-                          style: _theme.textTheme.bodyText1,
+                          style: theme.textTheme.bodyText1,
                         ),
                       ],
                     ),

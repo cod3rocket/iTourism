@@ -8,15 +8,15 @@ import 'repositories/attraction_repository.dart';
 class AttractionsModule extends Module {
   @override
   List<Bind> get binds => [
-        Bind((i) => AttractionsRepository(i())),
-        Bind((i) => AttractionsController(i())),
+        Bind.lazySingleton((i) => AttractionsRepository(i())),
+        Bind.lazySingleton((i) => AttractionsController(i()), export: true),
       ];
 
   @override
   final List<ModularRoute> routes = [
     ChildRoute(
       '/',
-      child: (_, args) => const AttractionsPage(),
+      child: (_, args) => AttractionsPage(),
       transition: TransitionType.fadeIn,
     ),
     ChildRoute(

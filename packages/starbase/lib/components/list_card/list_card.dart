@@ -23,19 +23,19 @@ class ListCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _theme = Theme.of(context);
+    final theme = Theme.of(context);
 
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: _borderRadius,
-        ),
-        margin: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 8,
-        ),
-        height: 116,
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: _borderRadius,
+      ),
+      margin: const EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: 8,
+      ),
+      height: 116,
+      child: InkWell(
+        onTap: onTap,
         child: ClipRRect(
           clipBehavior: Clip.antiAlias,
           borderRadius: _borderRadius,
@@ -69,7 +69,7 @@ class ListCard extends StatelessWidget {
                       topRight: Radius.circular(8),
                       bottomRight: Radius.circular(8),
                     ),
-                    color: _theme.colorScheme.primary.withOpacity(0.1),
+                    color: theme.colorScheme.primary.withOpacity(0.1),
                   ),
                 ),
               ),
@@ -100,12 +100,12 @@ class ListCard extends StatelessWidget {
                             Icon(
                               Icons.star,
                               size: 16,
-                              color: _theme.iconTheme.color,
+                              color: theme.iconTheme.color,
                             ),
                             const SizedBox(width: 8),
                             Text(
                               rate.toDouble().toString(),
-                              style: _theme.textTheme.bodyText2,
+                              style: theme.textTheme.bodyText2,
                             ),
                           ],
                         ),

@@ -7,13 +7,13 @@ import 'package:starbase/starbase.dart';
 import '../controllers/attractions_controller.dart';
 
 class AttractionsPage extends StatelessWidget {
-  const AttractionsPage({Key? key}) : super(key: key);
+  final AttractionsController attractionsController =
+      Modular.get<AttractionsController>();
+
+  AttractionsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final AttractionsController attractionsController =
-        Modular.get<AttractionsController>();
-
     return Scaffold(
         appBar: AppBar(
           title: const Text('Locais'),
