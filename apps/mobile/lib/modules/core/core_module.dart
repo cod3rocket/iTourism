@@ -18,7 +18,7 @@ class CoreModule extends Module {
         ),
         Bind.lazySingleton((i) => NotificationService(), export: true),
         AsyncBind(
-          (i) => CloudMessageService.initCloudMessageService(i()),
+          (i) => CloudMessageService.initCloudMessageService(i.get()),
           export: true,
         ),
         Bind.lazySingleton((i) => ApiClient.createApi(), export: true),
