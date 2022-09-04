@@ -7,11 +7,11 @@ import '../controllers/map_controller.dart';
 
 class MapPage extends StatelessWidget {
   final String title;
+  final CameraPosition cameraPosition;
 
   final MapController controller = Modular.get<MapController>();
-  final LatLng _center = const LatLng(-23.1063049, -50.3908948);
 
-  MapPage({super.key, this.title = 'MapPage'});
+  MapPage({super.key, required this.title, required this.cameraPosition});
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +21,7 @@ class MapPage extends StatelessWidget {
       ),
       body: GoogleMap(
         onMapCreated: controller.onMapCreated,
-        initialCameraPosition: CameraPosition(
-          target: _center,
-          zoom: 11.0,
-        ),
+        initialCameraPosition: cameraPosition,
       ),
     );
   }

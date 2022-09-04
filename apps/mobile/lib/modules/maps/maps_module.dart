@@ -12,7 +12,10 @@ class MapModule extends Module {
   List<ModularRoute> get routes => [
         ChildRoute(
           '/',
-          child: (_, args) => MapPage(title: args.data?.title ?? 'MapPage'),
+          child: (_, args) => MapPage(
+            title: args.queryParams['title'] ?? 'Mapa',
+            cameraPosition: args.data,
+          ),
         ),
       ];
 }
