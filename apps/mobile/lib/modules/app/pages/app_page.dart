@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:itourism_mobile/modules/app/app_controller.dart';
+import 'package:itourism_mobile/modules/app/controllers/app_controller.dart';
 
 class AppPage extends StatelessWidget {
   final AppController appController = Modular.get<AppController>();

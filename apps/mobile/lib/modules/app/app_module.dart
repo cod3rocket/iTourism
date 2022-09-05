@@ -2,12 +2,13 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:itourism_mobile/modules/attractions/attractions_module.dart';
 import 'package:itourism_mobile/modules/core/core_module.dart';
 import 'package:itourism_mobile/modules/maps/maps_module.dart';
+import 'package:itourism_mobile/modules/splash/splash_module.dart';
 
 import '../events/events_module.dart';
 import '../public_utility/public_utility_module.dart';
 
-import 'app_controller.dart';
-import 'app_page.dart';
+import 'controllers/app_controller.dart';
+import 'pages/app_page.dart';
 
 class AppModule extends Module {
   @override
@@ -46,5 +47,6 @@ class AppModule extends Module {
           '/maps',
           module: MapModule(),
         ),
+        ModuleRoute('/splash', module: SplashModule())
       ];
 }
