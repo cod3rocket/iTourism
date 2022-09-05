@@ -4,6 +4,11 @@
         android:label="iTourism"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data
+          android:name="com.google.android.geo.API_KEY"
+          android:value="AIzaSyBEFMk4H0rNXx0AlX7mqNkyBxpO0Zi_D8k" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

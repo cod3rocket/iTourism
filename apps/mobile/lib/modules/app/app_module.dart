@@ -1,6 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:itourism_mobile/modules/attractions/attractions_module.dart';
 import 'package:itourism_mobile/modules/core/core_module.dart';
+import 'package:itourism_mobile/modules/maps/maps_module.dart';
 
 import '../events/events_module.dart';
 import '../public_utility/public_utility_module.dart';
@@ -40,6 +41,10 @@ class AppModule extends Module {
               module: PublicUtilityModule(),
             ),
           ],
+        ),
+        ModuleRoute(
+          '/maps',
+          module: MapModule(),
         ),
       ];
 }
