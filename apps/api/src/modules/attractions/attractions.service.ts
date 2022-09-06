@@ -36,7 +36,7 @@ export class AttractionsService {
     return serializeCollection(attractions, AttractionModel);
   }
 
-  async findOneById(id: string): Promise<AttractionModel> {
+  async findById(id: string): Promise<AttractionModel> {
     const attraction = await this.prismaService.attraction.findUnique({
       where: { id },
       select: {
