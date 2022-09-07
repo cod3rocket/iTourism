@@ -1,4 +1,4 @@
-import 'package:itourism_mobile/modules/attractions/repositories/attraction_repository.dart';
+import 'package:itourism_mobile/modules/attractions/repositories/attractions_repository.dart';
 import 'package:mobx/mobx.dart';
 
 import '../models/attraction_model.dart';
@@ -18,6 +18,9 @@ abstract class _AttractionsControllerBase with Store {
   @observable
   List<Attraction> attractions = [];
 
+  @observable
+  late Attraction attraction;
+
   @computed
   List<Attraction> get featuredAttractions => attractions
       .where((attraction) => attraction.type == AttractionType.hotel)
@@ -31,6 +34,15 @@ abstract class _AttractionsControllerBase with Store {
     loading = true;
 
     attractions = await attractionsRepository.fetchAttractions();
+
+    loading = false;
+  }
+
+  @action
+  Future<void> fetchAttraction(String id) async {
+    loading = true;
+
+    attraction = await attractionsRepository.fetchAttraction(id);
 
     loading = false;
   }
