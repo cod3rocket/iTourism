@@ -16,4 +16,12 @@ class AttractionsRepository {
 
     return data.map((e) => Attraction.fromJson(e)).toList();
   }
+
+  Future<Attraction> fetchAttraction(String id) async {
+    final response = await apiClient.get<Response>('/v1/attractions/$id');
+
+    final dynamic data = response.data ?? {};
+
+    return Attraction.fromJson(data);
+  }
 }
