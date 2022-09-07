@@ -8,6 +8,6 @@ class SplashController {
 
   _initSplash() async {
     await Modular.isModuleReady<AppModule>();
-    Modular.to.navigate('/attractions/');
+    Modular.to.navigate('/home/attractions/');
   }
 }
