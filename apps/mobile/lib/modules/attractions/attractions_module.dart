@@ -3,7 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'controllers/attractions_controller.dart';
 import 'pages/attraction_page.dart';
 import 'pages/attractions_page.dart';
-import 'repositories/attraction_repository.dart';
+import 'repositories/attractions_repository.dart';
 
 class AttractionsModule extends Module {
   @override
@@ -21,8 +21,9 @@ class AttractionsModule extends Module {
     ),
     ChildRoute(
       '/:attractionId',
-      child: (_, args) =>
-          AttractionPage(attractionId: args.params['attractionId']),
+      child: (_, args) => AttractionPage(
+        attraction: args.data,
+      ),
     ),
   ];
 }

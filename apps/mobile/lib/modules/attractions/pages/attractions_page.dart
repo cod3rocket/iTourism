@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:starbase/starbase.dart';
@@ -74,10 +73,11 @@ class AttractionsPage extends StatelessWidget {
                                 title: featuredAttractions.name,
                                 imageUrl: featuredAttractions.banner,
                                 rate: featuredAttractions.rate,
-                                onTap: () {
+                                onTap: () => {
                                   Modular.to.pushNamed(
                                     '/attractions/${featuredAttractions.id}',
-                                  );
+                                    arguments: featuredAttractions,
+                                  ),
                                 },
                               ),
                             ],
@@ -100,10 +100,11 @@ class AttractionsPage extends StatelessWidget {
                             subtitle: attractions.description,
                             imageUrl: attractions.banner,
                             rate: attractions.rate,
-                            onTap: () {
+                            onTap: () => {
                               Modular.to.pushNamed(
                                 '/attractions/${attractions.id}',
-                              );
+                                arguments: attractions,
+                              ),
                             },
                           );
                         },
