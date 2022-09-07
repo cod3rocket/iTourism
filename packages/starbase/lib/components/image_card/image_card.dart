@@ -18,24 +18,27 @@ class ImageCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: onTap,
-        child: Column(
-          children: [
-            AspectRatio(
-              aspectRatio: 12 / 9,
-              child: CachedNetworkImage(
-                imageUrl: imageUrl,
-                fit: BoxFit.cover,
+    return Hero(
+      tag: imageUrl,
+      child: Card(
+        clipBehavior: Clip.antiAlias,
+        child: InkWell(
+          onTap: onTap,
+          child: Column(
+            children: [
+              AspectRatio(
+                aspectRatio: 12 / 9,
+                child: CachedNetworkImage(
+                  imageUrl: imageUrl,
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-            ListTile(
-              title: Text(title),
-              subtitle: Text(subtitle, maxLines: 4),
-            ),
-          ],
+              ListTile(
+                title: Text(title),
+                subtitle: Text(subtitle, maxLines: 4),
+              ),
+            ],
+          ),
         ),
       ),
     );
