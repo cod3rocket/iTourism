@@ -19,9 +19,9 @@ class Attraction {
 
   String cityId;
 
-  int latitude;
+  double latitude;
 
-  int longitude;
+  double longitude;
 
   String banner;
 
