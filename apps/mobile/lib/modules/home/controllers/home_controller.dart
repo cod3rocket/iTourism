@@ -1,11 +1,11 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 
-part 'app_controller.g.dart';
+part 'home_controller.g.dart';
 
-class AppController = _AppControllerBase with _$AppController;
+class HomeController = _HomeControllerBase with _$HomeController;
 
-abstract class _AppControllerBase with Store {
+abstract class _HomeControllerBase with Store {
   @observable
   int pageIndex = 0;
 
@@ -13,11 +13,11 @@ abstract class _AppControllerBase with Store {
   setPage(int newPageIndex) {
     pageIndex = newPageIndex;
     if (pageIndex == 0) {
-      Modular.to.navigate('/attractions/');
+      Modular.to.navigate('../attractions/');
     } else if (pageIndex == 1) {
-      Modular.to.navigate('/events/');
+      Modular.to.navigate('../events/');
     } else if (pageIndex == 2) {
-      Modular.to.navigate('/public-utility/');
+      Modular.to.navigate('../public-utility/');
     }
   }
 }
