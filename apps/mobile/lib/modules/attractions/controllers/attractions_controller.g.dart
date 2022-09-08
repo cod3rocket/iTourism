@@ -33,6 +33,22 @@ mixin _$AttractionsController on _AttractionsControllerBase, Store {
     });
   }
 
+  late final _$attractionAtom =
+      Atom(name: '_AttractionsControllerBase.attraction', context: context);
+
+  @override
+  Attraction get attraction {
+    _$attractionAtom.reportRead();
+    return super.attraction;
+  }
+
+  @override
+  set attraction(Attraction value) {
+    _$attractionAtom.reportWrite(value, super.attraction, () {
+      super.attraction = value;
+    });
+  }
+
   late final _$loadingAtom =
       Atom(name: '_AttractionsControllerBase.loading', context: context);
 
@@ -58,10 +74,20 @@ mixin _$AttractionsController on _AttractionsControllerBase, Store {
     return _$fetchAttractionsAsyncAction.run(() => super.fetchAttractions());
   }
 
+  late final _$fetchAttractionAsyncAction = AsyncAction(
+      '_AttractionsControllerBase.fetchAttraction',
+      context: context);
+
+  @override
+  Future<void> fetchAttraction(String id) {
+    return _$fetchAttractionAsyncAction.run(() => super.fetchAttraction(id));
+  }
+
   @override
   String toString() {
     return '''
 attractions: ${attractions},
+attraction: ${attraction},
 loading: ${loading},
 featuredAttractions: ${featuredAttractions}
     ''';

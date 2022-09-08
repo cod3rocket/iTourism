@@ -9,6 +9,7 @@ environment:
   sdk: '>=2.17.6 <3.0.0'
 
 dependencies:
+  smooth_page_indicator: ^1.0.0+2
   firebase_core: ^1.21.1
   firebase_messaging: ^13.0.0
   starbase: any
