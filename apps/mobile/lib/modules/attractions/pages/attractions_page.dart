@@ -73,11 +73,11 @@ class AttractionsPage extends StatelessWidget {
                                 title: featuredAttractions.name,
                                 imageUrl: featuredAttractions.banner,
                                 rate: featuredAttractions.rate,
-                                onTap: () => {
+                                onTap: () {
                                   Modular.to.pushNamed(
                                     '/attractions/${featuredAttractions.id}',
                                     arguments: featuredAttractions,
-                                  ),
+                                  );
                                 },
                               ),
                             ],

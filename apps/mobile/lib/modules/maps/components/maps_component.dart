@@ -7,11 +7,12 @@ class MapComponent extends StatefulWidget {
   final Set<Marker> markers;
   final Function()? onTap;
 
-  const MapComponent(
-      {super.key,
-      required this.cameraPosition,
-      this.markers = const {},
-      this.onTap});
+  const MapComponent({
+    super.key,
+    required this.cameraPosition,
+    this.markers = const {},
+    this.onTap,
+  });
 
   @override
   State<MapComponent> createState() => _MapComponentState();
