@@ -21,7 +21,7 @@ class EventsModule extends Module {
         ),
         ChildRoute(
           '/:eventId',
-          child: (_, args) => EventPage(eventId: args.params['eventId']),
+          child: (_, args) => EventPage(event: args.data),
         ),
       ];
 }
