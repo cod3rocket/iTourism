@@ -46,14 +46,19 @@ class _MapComponentState extends State<MapComponent> {
         height: 200,
         child: Card(
           clipBehavior: Clip.antiAlias,
-          child: GoogleMap(
-            onTap: (_) {
-              widget.onTap!();
-            },
-            markers: widget.markers,
-            onMapCreated: onMapCreated,
-            zoomControlsEnabled: false,
-            initialCameraPosition: widget.cameraPosition,
+          child: ClipRRect(
+            borderRadius: const BorderRadius.all(
+              Radius.circular(4),
+            ),
+            child: GoogleMap(
+              onTap: (_) {
+                widget.onTap!();
+              },
+              markers: widget.markers,
+              onMapCreated: onMapCreated,
+              zoomControlsEnabled: false,
+              initialCameraPosition: widget.cameraPosition,
+            ),
           ),
         ),
       ),
