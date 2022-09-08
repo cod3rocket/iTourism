@@ -14,6 +14,7 @@ class AppModule extends Module {
         CoreModule(),
         AttractionsModule(),
         EventsModule(),
+        PublicUtilityModule()
       ];
 
   @override
