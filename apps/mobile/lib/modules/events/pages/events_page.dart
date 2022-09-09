@@ -44,7 +44,10 @@ class EventsPage extends StatelessWidget {
                       subtitle: event.description,
                       imageUrl: event.banner,
                       onTap: () {
-                        Modular.to.pushNamed('/events/${event.id}');
+                        Modular.to.pushNamed(
+                          '/events/${event.id}',
+                          arguments: event,
+                        );
                       },
                     ),
                   );
