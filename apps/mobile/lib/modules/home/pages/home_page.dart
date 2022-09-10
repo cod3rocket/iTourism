@@ -18,20 +18,24 @@ class HomePage extends StatelessWidget {
       body: const RouterOutlet(),
       bottomNavigationBar: Observer(
         builder: (_) {
-          return BottomNavigationBar(
-            currentIndex: appController.pageIndex,
-            onTap: appController.setPage,
-            items: const [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.map_rounded),
+          return NavigationBar(
+            selectedIndex: appController.pageIndex,
+            onDestinationSelected: appController.setPage,
+            labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
+            destinations: const [
+              NavigationDestination(
+                icon: Icon(Icons.map_outlined),
+                selectedIcon: Icon(Icons.map_rounded),
                 label: 'Locais',
               ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.calendar_today_rounded),
+              NavigationDestination(
+                icon: Icon(Icons.calendar_today_outlined),
+                selectedIcon: Icon(Icons.calendar_today_rounded),
                 label: 'Eventos',
               ),
-              BottomNavigationBarItem(
+              NavigationDestination(
                 icon: Icon(Icons.help_outline_rounded),
+                selectedIcon: Icon(Icons.help_rounded),
                 label: 'Utilidades Publicas',
               ),
             ],
