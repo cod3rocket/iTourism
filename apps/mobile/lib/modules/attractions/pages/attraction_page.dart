@@ -13,6 +13,11 @@ class AttractionPage extends StatelessWidget {
 
   const AttractionPage({super.key, required this.attraction});
 
+  Widget _divider() => const Padding(
+        padding: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+        child: Divider(),
+      );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,86 +73,61 @@ class AttractionPage extends StatelessWidget {
             delegate: SliverChildListDelegate(
               [
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 8,
-                  ),
-                  child: ListTile(
-                      title: Text(
+                  padding: const EdgeInsets.all(8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
                         attraction.name,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 30.0,
-                          letterSpacing: 1.4,
-                        ),
+                        style: Theme.of(context).textTheme.headline3,
                       ),
-                      subtitle: Row(
+                      Row(
                         children: [
                           const Icon(
                             Icons.location_on_outlined,
                             size: 16,
-                            color: Colors.white70,
+                            color: Colors.grey,
                           ),
-                          const SizedBox(width: 5.0),
+                          const SizedBox(width: 8),
                           Text(
                             attraction.address,
                             maxLines: 2,
-                            style: const TextStyle(
-                              color: Colors.white70,
-                              fontSize: 16,
-                            ),
+                            style: Theme.of(context).textTheme.subtitle2,
                           ),
                         ],
-                      )),
-                ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 16,
+                      ),
+                    ],
                   ),
-                  child: Divider(
-                    color: Colors.white60,
+                ),
+                _divider(),
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Descrição',
+                        style: Theme.of(context).textTheme.headline5,
+                      ),
+                      Text(
+                        attraction.description,
+                        textAlign: TextAlign.justify,
+                        maxLines: 4,
+                        style: Theme.of(context).textTheme.bodyText1,
+                      ),
+                    ],
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 8,
-                  ),
-                  child: ListTile(
-                    title: const Text(
-                      'Descrição',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24.0,
-                        letterSpacing: 1.2,
-                      ),
-                    ),
-                    subtitle: Text(
-                      attraction.description,
-                      textAlign: TextAlign.justify,
-                      maxLines: 4,
-                      style: const TextStyle(
-                        color: Colors.white70,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                ),
-                Column(
-                  children: [
-                    const ListTile(
-                      title: Text(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
                         'Localização',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24.0,
-                          letterSpacing: 1.2,
-                        ),
+                        style: Theme.of(context).textTheme.headline5,
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16,
-                      ),
-                      child: MapComponent(
+                      MapComponent(
                         onTap: () {
                           Modular.to.pushNamed(
                             '/maps/?title=${attraction.name}',
@@ -163,8 +143,8 @@ class AttractionPage extends StatelessWidget {
                         cameraPosition:
                             const CameraPosition(target: LatLng(0, 0)),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
             ),
