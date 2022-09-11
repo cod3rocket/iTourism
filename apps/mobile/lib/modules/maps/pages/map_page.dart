@@ -19,6 +19,12 @@ class MapPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+      floatingActionButton: FloatingActionButton(
+        tooltip: 'Abrir no Google Maps',
+        child: const Icon(Icons.location_on),
+        onPressed: () => controller.openInGoogleMaps(cameraPosition),
+      ),
       body: GoogleMap(
         onMapCreated: controller.onMapCreated,
         markers: {
