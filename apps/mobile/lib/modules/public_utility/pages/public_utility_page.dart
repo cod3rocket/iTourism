@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -58,7 +59,7 @@ class PublicUtilityPage extends StatelessWidget {
                               utility.latitude,
                               utility.longitude,
                             ),
-                            zoom: 4,
+                            zoom: 16,
                           ),
                         );
                       },

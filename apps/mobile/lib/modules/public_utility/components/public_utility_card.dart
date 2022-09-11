@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../../maps/components/maps_component.dart';
@@ -34,7 +35,7 @@ class PublicUtilityCard extends StatelessWidget {
                     latitute,
                     longitude,
                   ),
-                  zoom: 2,
+                  zoom: 16,
                 ),
                 onTap: onTap,
               ),
