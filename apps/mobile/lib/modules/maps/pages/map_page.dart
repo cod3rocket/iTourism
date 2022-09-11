@@ -21,6 +21,12 @@ class MapPage extends StatelessWidget {
       ),
       body: GoogleMap(
         onMapCreated: controller.onMapCreated,
+        markers: {
+          Marker(
+            markerId: MarkerId(title),
+            position: cameraPosition.target,
+          ),
+        },
         initialCameraPosition: cameraPosition,
       ),
     );

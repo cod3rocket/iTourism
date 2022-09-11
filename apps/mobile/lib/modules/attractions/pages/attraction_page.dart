@@ -25,6 +25,11 @@ class _AttractionPageState extends State<AttractionPage> {
         child: Divider(),
       );
 
+  _cameraPosition() => CameraPosition(
+        target: LatLng(widget.attraction.latitude, widget.attraction.longitude),
+        zoom: 16,
+      );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -144,12 +149,20 @@ class _AttractionPageState extends State<AttractionPage> {
                                 widget.attraction.latitude,
                                 widget.attraction.longitude,
                               ),
-                              zoom: 4,
+                              zoom: 16,
                             ),
                           );
                         },
-                        cameraPosition:
-                            const CameraPosition(target: LatLng(0, 0)),
+                        cameraPosition: _cameraPosition(),
+                        markers: {
+                          Marker(
+                            markerId: MarkerId(widget.attraction.name),
+                            position: LatLng(
+                              widget.attraction.latitude,
+                              widget.attraction.longitude,
+                            ),
+                          ),
+                        },
                       ),
                     ],
                   ),
