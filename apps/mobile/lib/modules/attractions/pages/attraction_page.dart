@@ -8,10 +8,17 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../models/attraction_model.dart';
 
-class AttractionPage extends StatelessWidget {
+class AttractionPage extends StatefulWidget {
   final Attraction attraction;
 
   const AttractionPage({super.key, required this.attraction});
+
+  @override
+  State<AttractionPage> createState() => _AttractionPageState();
+}
+
+class _AttractionPageState extends State<AttractionPage> {
+  final PageController _pageController = PageController(keepPage: true);
 
   Widget _divider() => const Padding(
         padding: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
@@ -30,11 +37,12 @@ class AttractionPage extends StatelessWidget {
               background: Stack(
                 children: [
                   Hero(
-                    tag: attraction.id,
+                    tag: widget.attraction.id,
                     child: PageView.builder(
-                      itemCount: attraction.gallery.length,
+                      controller: _pageController,
+                      itemCount: widget.attraction.gallery.length,
                       itemBuilder: (context, index) {
-                        final image = attraction.gallery[index];
+                        final image = widget.attraction.gallery[index];
                         return CachedNetworkImage(
                           imageUrl: image,
                           fit: BoxFit.cover,
@@ -52,10 +60,10 @@ class AttractionPage extends StatelessWidget {
                       alignment: Alignment.bottomCenter,
                       child: Padding(
                         padding: const EdgeInsets.only(bottom: 16.0),
-                        child: AnimatedSmoothIndicator(
-                          activeIndex: 0,
-                          count: attraction.gallery.length,
-                          effect: const WormEffect(
+                        child: SmoothPageIndicator(
+                          controller: _pageController,
+                          count: widget.attraction.gallery.length,
+                          effect: const ExpandingDotsEffect(
                             dotHeight: 8,
                             dotWidth: 8,
                             activeDotColor: Colors.white,
@@ -78,7 +86,7 @@ class AttractionPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        attraction.name,
+                        widget.attraction.name,
                         style: Theme.of(context).textTheme.headline3,
                       ),
                       Row(
@@ -90,7 +98,7 @@ class AttractionPage extends StatelessWidget {
                           ),
                           const SizedBox(width: 8),
                           Text(
-                            attraction.address,
+                            widget.attraction.address,
                             maxLines: 2,
                             style: Theme.of(context).textTheme.subtitle2,
                           ),
@@ -110,7 +118,7 @@ class AttractionPage extends StatelessWidget {
                         style: Theme.of(context).textTheme.headline5,
                       ),
                       Text(
-                        attraction.description,
+                        widget.attraction.description,
                         textAlign: TextAlign.justify,
                         maxLines: 4,
                         style: Theme.of(context).textTheme.bodyText1,
@@ -130,11 +138,11 @@ class AttractionPage extends StatelessWidget {
                       MapComponent(
                         onTap: () {
                           Modular.to.pushNamed(
-                            '/maps/?title=${attraction.name}',
+                            '/maps/?title=${widget.attraction.name}',
                             arguments: CameraPosition(
                               target: LatLng(
-                                attraction.latitude,
-                                attraction.longitude,
+                                widget.attraction.latitude,
+                                widget.attraction.longitude,
                               ),
                               zoom: 4,
                             ),
