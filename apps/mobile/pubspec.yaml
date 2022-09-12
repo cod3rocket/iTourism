@@ -23,6 +23,7 @@ dependencies:
   dio: ^4.0.6
   google_maps_flutter: ^2.2.0
   cached_network_image: ^3.2.2
+  url_launcher: ^6.1.5
   flutter:
     sdk: flutter
 
