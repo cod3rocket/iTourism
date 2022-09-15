@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:itourism_mobile/config/i18n.dart';
+import 'package:localization/localization.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -22,21 +24,21 @@ class HomePage extends StatelessWidget {
             selectedIndex: appController.pageIndex,
             onDestinationSelected: appController.setPage,
             labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
-            destinations: const [
+            destinations: [
               NavigationDestination(
-                icon: Icon(Icons.map_outlined),
-                selectedIcon: Icon(Icons.map_rounded),
-                label: 'Locais',
+                icon: const Icon(Icons.map_outlined),
+                selectedIcon: const Icon(Icons.map_rounded),
+                label: I18nWords.navigationBarItemAttractions.i18n(),
               ),
               NavigationDestination(
-                icon: Icon(Icons.calendar_today_outlined),
-                selectedIcon: Icon(Icons.calendar_today_rounded),
-                label: 'Eventos',
+                icon: const Icon(Icons.calendar_today_outlined),
+                selectedIcon: const Icon(Icons.calendar_today_rounded),
+                label: I18nWords.navigationBarItemEvents.i18n(),
               ),
               NavigationDestination(
-                icon: Icon(Icons.help_outline_rounded),
-                selectedIcon: Icon(Icons.help_rounded),
-                label: 'Utilidades Publicas',
+                icon: const Icon(Icons.help_outline_rounded),
+                selectedIcon: const Icon(Icons.help_rounded),
+                label: I18nWords.navigationBarItemPublicUtility.i18n(),
               ),
             ],
           );

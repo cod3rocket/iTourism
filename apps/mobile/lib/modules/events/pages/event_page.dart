@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:itourism_mobile/config/i18n.dart';
 import 'package:itourism_mobile/modules/maps/components/maps_component.dart';
+import 'package:localization/localization.dart';
 
 import '../models/event_model.dart';
 
@@ -90,7 +92,7 @@ class EventPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Descrição',
+                          I18nWords.eventsDetailsPageDescription.i18n(),
                           style: Theme.of(context).textTheme.headline5,
                         ),
                         Text(
@@ -109,7 +111,7 @@ class EventPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Localização',
+                      I18nWords.eventsDetailsPageLocation.i18n(),
                       style: Theme.of(context).textTheme.headline5,
                     ),
                     MapComponent(

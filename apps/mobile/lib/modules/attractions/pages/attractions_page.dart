@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:itourism_mobile/config/i18n.dart';
+import 'package:localization/localization.dart';
 import 'package:starbase/starbase.dart';
 
 import '../controllers/attractions_controller.dart';
@@ -16,7 +18,7 @@ class AttractionsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Locais'),
+          title: Text(I18nWords.attractionsPageTitle.i18n()),
         ),
         body: RefreshIndicator(
           onRefresh: attractionsController.fetchAttractions,
@@ -30,8 +32,8 @@ class AttractionsPage extends StatelessWidget {
               }
 
               if (attractionsController.attractions.isEmpty) {
-                return const Center(
-                  child: Text('Nenhum local encontrado'),
+                return Center(
+                  child: Text(I18nWords.attractionsPageNoData.i18n()),
                 );
               }
 
@@ -45,10 +47,10 @@ class AttractionsPage extends StatelessWidget {
                         vertical: 8,
                       ),
                       child: Row(
-                        children: const [
+                        children: [
                           Text(
-                            'Destaques',
-                            style: TextStyle(
+                            I18nWords.attractionsPageHighlights.i18n(),
+                            style: const TextStyle(
                               fontSize: 22.0,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 1.4,

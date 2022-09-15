@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:itourism_mobile/config/i18n.dart';
 import 'package:itourism_mobile/modules/events/controllers/events_controller.dart';
+import 'package:localization/localization.dart';
 import 'package:starbase/starbase.dart';
 
 class EventsPage extends StatelessWidget {
@@ -14,7 +16,7 @@ class EventsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Eventos'),
+          title: Text(I18nWords.eventsPageTitle.i18n()),
         ),
         body: RefreshIndicator(
           onRefresh: eventsController.findAll,
@@ -27,8 +29,8 @@ class EventsPage extends StatelessWidget {
               }
 
               if (eventsController.events.isEmpty) {
-                return const Center(
-                  child: Text('Nenhum evento encontrado'),
+                return Center(
+                  child: Text(I18nWords.eventsPageNoData.i18n()),
                 );
               }
 
