@@ -15,17 +15,17 @@ class PublicUtilityRepository {
         'description': 'Prefeitura Municipal de Bandeirantes',
         'latitude': 0.0,
         'longitude': 0.0,
-        'tel': 4335422052,
+        'telephone': '4335422052',
         'createdAt': '2021-07-01T00:00:00.000Z',
         'updatedAt': '2021-07-01T00:00:00.000Z'
       },
       {
         'id': '2',
-        'name': 'Conselho Tutelar',
-        'description': 'Conselho Tutelar de Bandeirantes',
+        'name': 'Conselho Tutelephonear',
+        'description': 'Conselho Tutelephonear de Bandeirantes',
         'latitude': 0.0,
         'longitude': 0.0,
-        'tel': 4335426582,
+        'telephone': '4335426582',
         'createdAt': '2021-07-01T00:00:00.000Z',
         'updatedAt': '2021-07-01T00:00:00.000Z'
       },
@@ -35,7 +35,7 @@ class PublicUtilityRepository {
         'description': 'Correios de Bandeirantes',
         'latitude': 0.0,
         'longitude': 0.0,
-        'tel': 4335423747,
+        'telephone': '4335423747',
         'createdAt': '2021-07-01T00:00:00.000Z',
         'updatedAt': '2021-07-01T00:00:00.000Z'
       },
@@ -45,7 +45,7 @@ class PublicUtilityRepository {
         'description': 'Posto de Saúde de Bandeirantes',
         'latitude': 0.0,
         'longitude': 0.0,
-        'tel': 4335424980,
+        'telephone': '4335424980',
         'createdAt': '2021-07-01T00:00:00.000Z',
         'updatedAt': '2021-07-01T00:00:00.000Z'
       },

@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../maps/components/maps_component.dart';
 
 class PublicUtilityCard extends StatelessWidget {
   final String title;
   final String subtitle;
+  final String? telephone;
   final double latitute;
   final double longitude;
 
@@ -19,6 +21,7 @@ class PublicUtilityCard extends StatelessWidget {
     required this.latitute,
     required this.longitude,
     this.onTap,
+    this.telephone,
   }) : super(key: key);
 
   @override
@@ -49,9 +52,14 @@ class PublicUtilityCard extends StatelessWidget {
             bottom: 0,
             right: 0,
             child: InkWell(
-              onTap: () {
-                // TODO
-                print('Redirect tel not implemented');
+              onTap: () async {
+                if (telephone != null) {
+                  final url = Uri.parse('tel:$telephone');
+
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url);
+                  }
+                }
               },
               child: const Padding(
                 padding: EdgeInsets.all(16),

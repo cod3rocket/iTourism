@@ -14,7 +14,7 @@ class PublicUtility {
 
   double longitude;
 
-  int tel;
+  String telephone;
 
   DateTime createdAt;
 
@@ -26,7 +26,7 @@ class PublicUtility {
     required this.description,
     required this.latitude,
     required this.longitude,
-    required this.tel,
+    required this.telephone,
     required this.createdAt,
     required this.updatedAt,
   });
