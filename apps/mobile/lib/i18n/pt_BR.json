@@ -10,5 +10,7 @@
   "events-page-title": "Eventos",
   "events-page-no-data": "Não há dados para mostrar",
   "events-details-page-description": "Descrição",
-  "events-details-page-location": "Localização"
+  "events-details-page-location": "Localização",
+  "public-utility-page-title": "Utilidades Públicas",
+  "public-utility-page-no-data": "Não há dados para mostrar"
 }

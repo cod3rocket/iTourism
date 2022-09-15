@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:itourism_mobile/config/i18n.dart';
+import 'package:localization/localization.dart';
 
 import '../components/public_utility_card.dart';
 import '../controllers/public_utility_controller.dart';
@@ -17,7 +19,7 @@ class PublicUtilityPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Utilidades Públicas'),
+          title: Text(I18nWords.publicUtilityPageTitle.i18n()),
         ),
         body: RefreshIndicator(
           onRefresh: publicUtilityController.findAll,
@@ -31,9 +33,9 @@ class PublicUtilityPage extends StatelessWidget {
               }
 
               if (publicUtilityController.publicUtilities.isEmpty) {
-                return const Center(
+                return Center(
                   child: Text(
-                    'Nenhuma utilidade pública encontrada',
+                    I18nWords.publicUtilityPageNoData.i18n(),
                   ),
                 );
               }

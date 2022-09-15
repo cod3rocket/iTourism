@@ -23,4 +23,8 @@ class I18nWords {
   static String eventsDetailsPageDescription =
       'events-details-page-description';
   static String eventsDetailsPageLocation = 'events-details-page-location';
+
+  // Public utility module
+  static String publicUtilityPageTitle = 'public-utility-page-title';
+  static String publicUtilityPageNoData = 'public-utility-page-no-data';
 }
