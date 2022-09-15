@@ -6,5 +6,9 @@
   "attractions-page-no-data": "No data available",
   "attractions-page-highlights": "Highlights",
   "attractions-details-page-description": "Description",
-  "attractions-details-page-location": "Location"
+  "attractions-details-page-location": "Location",
+  "events-page-title": "Events",
+  "events-page-no-data": "No data available",
+  "events-details-page-description": "Description",
+  "events-details-page-location": "Location"
 }

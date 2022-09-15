@@ -15,4 +15,12 @@ class I18nWords {
       'attractions-details-page-description';
   static String attractionsDetailsPageLocation =
       'attractions-details-page-location';
+
+  // Events module
+  static String eventsPageTitle = 'events-page-title';
+  static String eventsPageNoData = 'events-page-no-data';
+
+  static String eventsDetailsPageDescription =
+      'events-details-page-description';
+  static String eventsDetailsPageLocation = 'events-details-page-location';
 }
