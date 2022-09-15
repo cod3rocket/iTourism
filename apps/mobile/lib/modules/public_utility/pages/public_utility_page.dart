@@ -51,6 +51,7 @@ class PublicUtilityPage extends StatelessWidget {
                       subtitle: utility.description,
                       latitute: utility.latitude,
                       longitude: utility.longitude,
+                      telephone: utility.telephone,
                       onTap: () {
                         Modular.to.pushNamed(
                           '/maps/?title=${utility.name}',

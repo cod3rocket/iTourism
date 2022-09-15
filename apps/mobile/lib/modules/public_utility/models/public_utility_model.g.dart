@@ -13,7 +13,7 @@ PublicUtility _$PublicUtilityFromJson(Map<String, dynamic> json) =>
       description: json['description'] as String,
       latitude: (json['latitude'] as num).toDouble(),
       longitude: (json['longitude'] as num).toDouble(),
-      tel: json['tel'] as int,
+      telephone: json['telephone'] as String,
       createdAt: DateTime.parse(json['createdAt'] as String),
       updatedAt: DateTime.parse(json['updatedAt'] as String),
     );
@@ -25,7 +25,7 @@ Map<String, dynamic> _$PublicUtilityToJson(PublicUtility instance) =>
       'description': instance.description,
       'latitude': instance.latitude,
       'longitude': instance.longitude,
-      'tel': instance.tel,
+      'telephone': instance.telephone,
       'createdAt': instance.createdAt.toIso8601String(),
       'updatedAt': instance.updatedAt.toIso8601String(),
     };
