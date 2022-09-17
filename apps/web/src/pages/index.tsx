@@ -1,88 +1,134 @@
-import { GoMarkGithub } from 'react-icons/go';
-import { MdDarkMode, MdLightMode } from 'react-icons/md';
-import { RiHeartFill } from 'react-icons/ri';
+import { HiChevronDoubleRight } from 'react-icons/hi';
 
 import {
-  ButtonGroup,
-  Center,
+  Flex,
   Heading,
-  Icon,
-  IconButton,
-  Link,
-  Progress,
-  Text,
-  useColorMode,
   VStack,
+  Text,
+  Button,
+  Box,
+  Icon,
 } from '@chakra-ui/react';
+import Footer from 'components/Footer';
+import Header from 'components/Header';
 import Head from 'next/head';
+import NextImage from 'next/image';
 
 function Home() {
-  const colorMode = useColorMode();
-
-  const isDarkTheme = colorMode.colorMode === 'dark';
-
   return (
-    <VStack w="full" minH="100vh" justifyContent="space-between">
+    <>
       <Head>
-        <title>iTurism</title>
+        <title>iTourism</title>
       </Head>
-      <ButtonGroup
-        as="header"
-        w="full"
-        p={{
-          base: '4',
-          md: '8',
-        }}
-        justifyContent="end"
-        variant="ghost"
-        size="lg"
-      >
-        <IconButton
-          aria-label="toggle theme"
-          icon={<Icon as={isDarkTheme ? MdLightMode : MdDarkMode} />}
-          onClick={colorMode.toggleColorMode}
-        />
-        <IconButton
-          as="a"
-          icon={<Icon as={GoMarkGithub} />}
-          aria-label="Github"
-          href="https://github.com/cod3rocket/iTourism"
-          target="_blank"
-        />
-      </ButtonGroup>
-      <Center as="main" w="full">
-        <VStack>
-          <Heading>Hello World!</Heading>
-          <Text>News coming soon...</Text>
-          <Progress w="full" h="2" size="xl" value={64} isAnimated hasStripe />
+      <VStack minH="100vh" w="full">
+        <Header />
+        <Flex paddingY="8" w="1240px" justify="space-around" align="center">
+          <Box>
+            <Flex gap="4" w="96" flexDir="column">
+              <Heading as="h1">
+                Discover the Pioneer North with iTourism
+              </Heading>
+              <Text>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                modi, cumque eos, culpa neque, reprehenderit assumenda atque
+                explicabo molestiae ullam unde iste aut a consequatur nesciunt
+                dolor commodi quod aspernatur.
+              </Text>
+            </Flex>
+            <Button
+              mt="4"
+              display="flex"
+              justifyContent="start"
+              alignItems="center"
+              gap="2"
+              _hover={{
+                gap: '4',
+              }}
+            >
+              Download
+              <Icon as={HiChevronDoubleRight} />
+            </Button>
+          </Box>
+
+          <Box>
+            <NextImage src="/assets/example7.png" width="348" height="457" />
+          </Box>
+        </Flex>
+      </VStack>
+
+      <Box as="section" id="features">
+        <VStack w="full">
+          <Flex paddingY="8" w="1240px" justify="space-around" align="center">
+            <Box>
+              <NextImage src="/assets/example7.png" width="348" height="457" />
+            </Box>
+
+            <Flex gap="4" w="96" flexDir="column">
+              <Heading as="h1">Display city utilities</Heading>
+              <Flex flexDir="row" align="center" justify="space-between">
+                <Box
+                  display="flex"
+                  flexDir="column"
+                  alignContent="center"
+                  justifyContent="space-between"
+                  gap="4"
+                >
+                  <Text fontSize="lg">Display attractions</Text>
+                  <Text fontSize="lg">Display events</Text>
+                </Box>
+
+                <Box
+                  display="flex"
+                  flexDir="column"
+                  alignContent="center"
+                  justifyContent="space-between"
+                  gap="4"
+                >
+                  <Text fontSize="lg">Display public utilities</Text>
+                  <Text fontSize="lg">Informations in real time</Text>
+                </Box>
+              </Flex>
+            </Flex>
+          </Flex>
         </VStack>
-      </Center>
-      <Center
-        as="footer"
-        w="full"
-        bg={isDarkTheme ? 'gray.600' : 'gray.200'}
-        p="8"
-      >
-        <Text>
-          Proudly made with <Icon as={RiHeartFill} color="red.500" /> by{' '}
-          <Link
-            href="https://github.com/henriq4"
-            color={isDarkTheme ? 'purple.200' : 'purple.500'}
-            isExternal
-          >
-            henriq4
-          </Link>{' '}
-          and{' '}
-          <Link
-            href="https://github.com/eduardoteles17"
-            color={isDarkTheme ? 'purple.200' : 'purple.500'}
-            isExternal
-          >
-            eduardoteles17
-          </Link>
-        </Text>
-      </Center>
-    </VStack>
+
+        <VStack w="full">
+          <Flex paddingY="8" w="1240px" justify="space-around" align="center">
+            <Flex gap="4" w="96" flexDir="column">
+              <Heading as="h1">Extras</Heading>
+              <Flex flexDir="row" align="center" justify="space-between">
+                <Box
+                  display="flex"
+                  flexDir="column"
+                  alignContent="center"
+                  justifyContent="space-between"
+                  gap="4"
+                >
+                  <Text fontSize="lg">Integration with Google Maps</Text>
+                  <Text fontSize="lg">Push notification</Text>
+                </Box>
+
+                <Box
+                  display="flex"
+                  flexDir="column"
+                  alignContent="center"
+                  justifyContent="space-between"
+                  gap="4"
+                >
+                  <Text fontSize="lg">Filter attractions by types</Text>
+                  <Text fontSize="lg">Viable in English and Portuguese</Text>
+                </Box>
+              </Flex>
+            </Flex>
+            <Box>
+              <NextImage src="/assets/example7.png" width="348" height="457" />
+            </Box>
+          </Flex>
+        </VStack>
+      </Box>
+
+      <Footer />
+    </>
   );
 }
 
