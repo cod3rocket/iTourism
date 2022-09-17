@@ -36,7 +36,7 @@ function Footer() {
         >
           Cod3Rocket
         </Link>
-        . Todos os direitos reservados.
+        . All rights reserved.
       </Text>
     </Center>
   );
