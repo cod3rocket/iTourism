@@ -11,10 +11,11 @@ function NavLink({ title, href }: INavLinkProps) {
     <Box p="2">
       <NextLink href={href} passHref>
         <Link
-          color="gray.700"
+          color="whiteAlpha.800"
+          fontSize="1rem"
           _hover={{
-            color: 'gray.800',
-            bg: 'gray.100',
+            color: 'whiteAlpha.900',
+            bg: 'whiteAlpha.100',
             px: '4px',
             py: '2px',
             borderRadius: '4px',
