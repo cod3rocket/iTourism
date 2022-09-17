@@ -3,10 +3,10 @@ import 'package:json_annotation/json_annotation.dart';
 part 'attraction_model.g.dart';
 
 enum AttractionType {
-  hotel,
   attraction,
-  restaurants,
   bars,
+  hotel,
+  restaurants,
 }
 
 @JsonSerializable()

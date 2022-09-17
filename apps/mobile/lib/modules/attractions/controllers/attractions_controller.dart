@@ -21,13 +21,30 @@ abstract class _AttractionsControllerBase with Store {
   @observable
   late Attraction attraction;
 
+  @observable
+  AttractionType? selectedType;
+
+  @observable
+  bool loading = false;
+
   @computed
   List<Attraction> get featuredAttractions => attractions
       .where((attraction) => attraction.type == AttractionType.hotel)
       .toList();
 
-  @observable
-  bool loading = false;
+  @computed
+  List<Attraction> get attractionsByType => attractions
+      .where((attraction) => attraction.type == selectedType)
+      .toList();
+
+  @action
+  selectAttractionType(AttractionType type) {
+    if (type == selectedType) {
+      selectedType = null;
+    } else {
+      selectedType = type;
+    }
+  }
 
   @action
   Future<void> fetchAttractions() async {

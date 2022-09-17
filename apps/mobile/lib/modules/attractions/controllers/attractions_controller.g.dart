@@ -16,6 +16,13 @@ mixin _$AttractionsController on _AttractionsControllerBase, Store {
           Computed<List<Attraction>>(() => super.featuredAttractions,
               name: '_AttractionsControllerBase.featuredAttractions'))
       .value;
+  Computed<List<Attraction>>? _$attractionsByTypeComputed;
+
+  @override
+  List<Attraction> get attractionsByType => (_$attractionsByTypeComputed ??=
+          Computed<List<Attraction>>(() => super.attractionsByType,
+              name: '_AttractionsControllerBase.attractionsByType'))
+      .value;
 
   late final _$attractionsAtom =
       Atom(name: '_AttractionsControllerBase.attractions', context: context);
@@ -46,6 +53,22 @@ mixin _$AttractionsController on _AttractionsControllerBase, Store {
   set attraction(Attraction value) {
     _$attractionAtom.reportWrite(value, super.attraction, () {
       super.attraction = value;
+    });
+  }
+
+  late final _$selectedTypeAtom =
+      Atom(name: '_AttractionsControllerBase.selectedType', context: context);
+
+  @override
+  AttractionType? get selectedType {
+    _$selectedTypeAtom.reportRead();
+    return super.selectedType;
+  }
+
+  @override
+  set selectedType(AttractionType? value) {
+    _$selectedTypeAtom.reportWrite(value, super.selectedType, () {
+      super.selectedType = value;
     });
   }
 
@@ -83,13 +106,29 @@ mixin _$AttractionsController on _AttractionsControllerBase, Store {
     return _$fetchAttractionAsyncAction.run(() => super.fetchAttraction(id));
   }
 
+  late final _$_AttractionsControllerBaseActionController =
+      ActionController(name: '_AttractionsControllerBase', context: context);
+
+  @override
+  dynamic selectAttractionType(AttractionType type) {
+    final _$actionInfo = _$_AttractionsControllerBaseActionController
+        .startAction(name: '_AttractionsControllerBase.selectAttractionType');
+    try {
+      return super.selectAttractionType(type);
+    } finally {
+      _$_AttractionsControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
   @override
   String toString() {
     return '''
 attractions: ${attractions},
 attraction: ${attraction},
+selectedType: ${selectedType},
 loading: ${loading},
-featuredAttractions: ${featuredAttractions}
+featuredAttractions: ${featuredAttractions},
+attractionsByType: ${attractionsByType}
     ''';
   }
 }
