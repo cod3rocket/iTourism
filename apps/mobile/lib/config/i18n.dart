@@ -16,6 +16,11 @@ class I18nWords {
   static String attractionsDetailsPageLocation =
       'attractions-details-page-location';
 
+  static String attractionTypeAttraction = 'attraction-type-attraction';
+  static String attractionTypeBars = 'attraction-type-bars';
+  static String attractionTypeHotel = 'attraction-type-hotel';
+  static String attractionTypeRestaurants = 'attraction-type-restaurants';
+
   // Events module
   static String eventsPageTitle = 'events-page-title';
   static String eventsPageNoData = 'events-page-no-data';
