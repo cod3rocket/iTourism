@@ -20,7 +20,7 @@ function Home() {
       <Head>
         <title>iTourism</title>
       </Head>
-      <VStack minH="100vh" w="full">
+      <VStack maxH="100vh" w="full">
         <Header />
         <Flex paddingY="8" w="1240px" justify="space-around" align="center">
           <Box>
