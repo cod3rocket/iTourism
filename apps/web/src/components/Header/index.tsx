@@ -15,16 +15,13 @@ import {
   Icon,
   Button,
 } from '@chakra-ui/react';
-import { en, pt_br } from 'locales';
+import { useLang } from 'hooks/useLang';
 import NextLink from 'next/link';
-import { useRouter } from 'next/router';
 
 import NavLink from './NavLink';
 
 function Header() {
-  const router = useRouter();
-
-  const l = router.locale === 'pt-BR' ? pt_br : en;
+  const { l } = useLang();
 
   return (
     <Center w="100%" bg="blackAlpha.900">

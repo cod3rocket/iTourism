@@ -11,15 +11,12 @@ import {
 } from '@chakra-ui/react';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
-import { en, pt_br } from 'locales';
+import { useLang } from 'hooks/useLang';
 import Head from 'next/head';
 import NextImage from 'next/image';
-import { useRouter } from 'next/router';
 
 function Home() {
-  const router = useRouter();
-
-  const l = router.locale === 'pt-BR' ? pt_br : en;
+  const { l } = useLang();
 
   return (
     <>

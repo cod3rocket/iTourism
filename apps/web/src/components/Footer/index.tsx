@@ -1,13 +1,10 @@
 import { RiHeartFill } from 'react-icons/ri';
 
 import { Center, Icon, Text, Link } from '@chakra-ui/react';
-import { pt_br, en } from 'locales';
-import { useRouter } from 'next/router';
+import { useLang } from 'hooks/useLang';
 
 function Footer() {
-  const router = useRouter();
-
-  const l = router.locale === 'pt-BR' ? pt_br : en;
+  const { l } = useLang();
 
   return (
     <Center
