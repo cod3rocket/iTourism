@@ -11,10 +11,16 @@ import {
 } from '@chakra-ui/react';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
+import { en, pt_br } from 'locales';
 import Head from 'next/head';
 import NextImage from 'next/image';
+import { useRouter } from 'next/router';
 
 function Home() {
+  const router = useRouter();
+
+  const l = router.locale === 'pt-BR' ? pt_br : en;
+
   return (
     <>
       <Head>
@@ -25,15 +31,8 @@ function Home() {
         <Flex paddingY="8" w="1240px" justify="space-around" align="center">
           <Box>
             <Flex gap="4" w="96" flexDir="column">
-              <Heading as="h1">
-                Discover the Pioneer North with iTourism
-              </Heading>
-              <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-                modi, cumque eos, culpa neque, reprehenderit assumenda atque
-                explicabo molestiae ullam unde iste aut a consequatur nesciunt
-                dolor commodi quod aspernatur.
-              </Text>
+              <Heading as="h1">{l.heading.title}</Heading>
+              <Text>{l.heading.subtitle}</Text>
             </Flex>
             <Button
               mt="4"
@@ -64,7 +63,7 @@ function Home() {
             </Box>
 
             <Flex gap="4" w="96" flexDir="column">
-              <Heading as="h1">Display city utilities</Heading>
+              <Heading as="h1">{l.features.title.utilities}</Heading>
               <Flex flexDir="row" align="center" justify="space-between">
                 <Box
                   display="flex"
@@ -73,8 +72,8 @@ function Home() {
                   justifyContent="space-between"
                   gap="4"
                 >
-                  <Text fontSize="lg">Display attractions</Text>
-                  <Text fontSize="lg">Display events</Text>
+                  <Text fontSize="lg">{l.features.attractions}</Text>
+                  <Text fontSize="lg">{l.features.events}</Text>
                 </Box>
 
                 <Box
@@ -84,8 +83,8 @@ function Home() {
                   justifyContent="space-between"
                   gap="4"
                 >
-                  <Text fontSize="lg">Display public utilities</Text>
-                  <Text fontSize="lg">Informations in real time</Text>
+                  <Text fontSize="lg">{l.features.public_utilities}</Text>
+                  <Text fontSize="lg">{l.features.real_time}</Text>
                 </Box>
               </Flex>
             </Flex>
@@ -95,7 +94,7 @@ function Home() {
         <VStack w="full">
           <Flex paddingY="8" w="1240px" justify="space-around" align="center">
             <Flex gap="4" w="96" flexDir="column">
-              <Heading as="h1">Extras</Heading>
+              <Heading as="h1">{l.features.title.extras}</Heading>
               <Flex flexDir="row" align="center" justify="space-between">
                 <Box
                   display="flex"
@@ -104,8 +103,8 @@ function Home() {
                   justifyContent="space-between"
                   gap="4"
                 >
-                  <Text fontSize="lg">Integration with Google Maps</Text>
-                  <Text fontSize="lg">Push notification</Text>
+                  <Text fontSize="lg">{l.features.maps}</Text>
+                  <Text fontSize="lg">{l.features.push_notification}</Text>
                 </Box>
 
                 <Box
@@ -115,8 +114,8 @@ function Home() {
                   justifyContent="space-between"
                   gap="4"
                 >
-                  <Text fontSize="lg">Filter attractions by types</Text>
-                  <Text fontSize="lg">Viable in English and Portuguese</Text>
+                  <Text fontSize="lg">{l.features.filter}</Text>
+                  <Text fontSize="lg">{l.features.lang_support}</Text>
                 </Box>
               </Flex>
             </Flex>

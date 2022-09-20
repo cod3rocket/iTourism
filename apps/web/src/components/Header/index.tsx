@@ -1,9 +1,31 @@
-import { Box, Center, Flex, Heading, Link, Text } from '@chakra-ui/react';
+import { GrLanguage } from 'react-icons/gr';
+import { HiChevronDown } from 'react-icons/hi';
+
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Box,
+  Center,
+  Flex,
+  Heading,
+  Link,
+  Text,
+  Icon,
+  Button,
+} from '@chakra-ui/react';
+import { en, pt_br } from 'locales';
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 
 import NavLink from './NavLink';
 
 function Header() {
+  const router = useRouter();
+
+  const l = router.locale === 'pt-BR' ? pt_br : en;
+
   return (
     <Center w="100%" bg="blackAlpha.900">
       <Flex align="center" justify="space-between" w="1240px">
@@ -26,9 +48,23 @@ function Header() {
         </Box>
 
         <Flex as="nav" flexDir="row" p="4">
-          <NavLink title="Features" href="#features" />
-          <NavLink title="Contact" href="#contact" />
+          <NavLink title={l.header.features} href="#features" />
+          <NavLink title={l.header.contact} href="#contact" />
         </Flex>
+
+        <Menu>
+          <MenuButton as={Button} rightIcon={<Icon as={HiChevronDown} />}>
+            <Icon as={GrLanguage} />
+          </MenuButton>
+          <MenuList>
+            <NextLink href="/" locale="pt-BR">
+              <MenuItem>pt-BR</MenuItem>
+            </NextLink>
+            <NextLink href="/" locale="en">
+              <MenuItem>en</MenuItem>
+            </NextLink>
+          </MenuList>
+        </Menu>
       </Flex>
     </Center>
   );
