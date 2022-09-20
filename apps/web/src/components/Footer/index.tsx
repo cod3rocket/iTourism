@@ -1,8 +1,11 @@
 import { RiHeartFill } from 'react-icons/ri';
 
 import { Center, Icon, Text, Link } from '@chakra-ui/react';
+import { useLang } from 'hooks/useLang';
 
 function Footer() {
+  const { l } = useLang();
+
   return (
     <Center
       display="flex"
@@ -14,11 +17,13 @@ function Footer() {
       gap="2"
     >
       <Text color="white">
-        Proudly made with <Icon as={RiHeartFill} color="red.500" /> by{' '}
+        {l.footer.accomplishment.first}{' '}
+        <Icon as={RiHeartFill} color="red.500" />{' '}
+        {l.footer.accomplishment.second}{' '}
         <Link href="https://github.com/henriq4" color="purple.200" isExternal>
           henriq4
         </Link>{' '}
-        and{' '}
+        {l.footer.accomplishment.third}{' '}
         <Link
           href="https://github.com/eduardoteles17"
           color="purple.200"
@@ -36,7 +41,7 @@ function Footer() {
         >
           Cod3Rocket
         </Link>
-        . All rights reserved.
+        . {l.footer.copyright}
       </Text>
     </Center>
   );
