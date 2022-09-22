@@ -43,6 +43,7 @@ Map<String, dynamic> _$AttractionToJson(Attraction instance) =>
     };
 
 const _$AttractionTypeEnumMap = {
+  AttractionType.all: 'all',
   AttractionType.attraction: 'attraction',
   AttractionType.bars: 'bars',
   AttractionType.hotel: 'hotel',

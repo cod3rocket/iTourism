@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:itourism_mobile/config/i18n.dart';
 import 'package:itourism_mobile/modules/attractions/models/attraction_model.dart';
 import 'package:localization/localization.dart';
@@ -10,6 +9,8 @@ class SelectAttractionType extends StatelessWidget {
 
   _selectIcon(AttractionType attractionType) {
     switch (attractionType) {
+      case AttractionType.all:
+        return Icons.all_inclusive;
       case AttractionType.attraction:
         return Icons.location_on;
       case AttractionType.bars:
@@ -25,6 +26,8 @@ class SelectAttractionType extends StatelessWidget {
 
   String _attractionTypeLabel(AttractionType attractionType) {
     switch (attractionType) {
+      case AttractionType.all:
+        return I18nWords.attractionTypeAll;
       case AttractionType.bars:
         return I18nWords.attractionTypeBars;
       case AttractionType.hotel:

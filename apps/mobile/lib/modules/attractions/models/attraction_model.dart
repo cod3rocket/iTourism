@@ -3,6 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'attraction_model.g.dart';
 
 enum AttractionType {
+  all,
   attraction,
   bars,
   hotel,

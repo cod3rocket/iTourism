@@ -22,7 +22,7 @@ abstract class _AttractionsControllerBase with Store {
   late Attraction attraction;
 
   @observable
-  AttractionType? selectedType;
+  AttractionType selectedType = AttractionType.all;
 
   @observable
   bool loading = false;
@@ -33,14 +33,20 @@ abstract class _AttractionsControllerBase with Store {
       .toList();
 
   @computed
-  List<Attraction> get attractionsByType => attractions
-      .where((attraction) => attraction.type == selectedType)
-      .toList();
+  List<Attraction> get attractionsByType {
+    if (selectedType == AttractionType.all) {
+      return attractions.toList();
+    }
+
+    return attractions
+        .where((attraction) => attraction.type == selectedType)
+        .toList();
+  }
 
   @action
   selectAttractionType(AttractionType type) {
     if (type == selectedType) {
-      selectedType = null;
+      selectedType = AttractionType.all;
     } else {
       selectedType = type;
     }

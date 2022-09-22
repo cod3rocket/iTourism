@@ -60,13 +60,13 @@ mixin _$AttractionsController on _AttractionsControllerBase, Store {
       Atom(name: '_AttractionsControllerBase.selectedType', context: context);
 
   @override
-  AttractionType? get selectedType {
+  AttractionType get selectedType {
     _$selectedTypeAtom.reportRead();
     return super.selectedType;
   }
 
   @override
-  set selectedType(AttractionType? value) {
+  set selectedType(AttractionType value) {
     _$selectedTypeAtom.reportWrite(value, super.selectedType, () {
       super.selectedType = value;
     });
