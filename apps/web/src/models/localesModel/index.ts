@@ -17,17 +17,29 @@ interface LocalesModel {
   };
   features: {
     title: {
-      utilities: string;
-      extras: string;
+      first: string;
+      second: string;
+      third: string;
+      fourth: string;
+      fifth: string;
+      sixth: string;
     };
-    attractions: string;
-    events: string;
-    public_utilities: string;
-    real_time: string;
-    maps: string;
-    filter: string;
-    push_notification: string;
-    lang_support: string;
+    infoText: {
+      first: string;
+      second: string;
+      third: string;
+      fourth: string;
+      fifth: string;
+      sixth: string;
+    };
+  };
+  contact: {
+    description: string;
+    notificationTime: {
+      first: string;
+      second: string;
+    };
+    notificationMessage: string;
   };
 }
 

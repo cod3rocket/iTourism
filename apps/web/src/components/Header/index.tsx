@@ -1,5 +1,4 @@
-import { GrLanguage } from 'react-icons/gr';
-import { HiChevronDown } from 'react-icons/hi';
+import { HiChevronDown, HiOutlineTranslate } from 'react-icons/hi';
 
 import {
   Menu,
@@ -24,8 +23,13 @@ function Header() {
   const { l } = useLang();
 
   return (
-    <Center w="100%" bg="blackAlpha.900">
-      <Flex align="center" justify="space-between" w="1240px">
+    <Center
+      w="100%"
+      bg="rgba(18, 18, 20, 0.75)"
+      borderBottom="1px"
+      borderBottomColor="#323238"
+    >
+      <Flex align="center" justify="space-between" w="1000px" h="80px">
         <Box>
           <NextLink href="/" passHref>
             <Link
@@ -34,7 +38,7 @@ function Header() {
               }}
               href="/"
             >
-              <Heading color="whiteAlpha.900">
+              <Heading color="#ededed">
                 <Text as="span" color="red.400" fontWeight="bold">
                   .
                 </Text>
@@ -44,21 +48,43 @@ function Header() {
           </NextLink>
         </Box>
 
-        <Flex as="nav" flexDir="row" p="4">
+        <Flex as="nav" flexDir="row">
           <NavLink title={l.header.features} href="#features" />
           <NavLink title={l.header.contact} href="#contact" />
         </Flex>
 
         <Menu>
-          <MenuButton as={Button} rightIcon={<Icon as={HiChevronDown} />}>
-            <Icon as={GrLanguage} />
+          <MenuButton
+            aria-label="Select language"
+            as={Button}
+            _hover={{ bg: '#121214' }}
+            _expanded={{ bg: '#121214' }}
+            backgroundColor="transparent"
+            rightIcon={<Icon as={HiChevronDown} color="#ededed" />}
+          >
+            <Icon fontSize="xl" as={HiOutlineTranslate} color="#ededed" />
           </MenuButton>
-          <MenuList>
+          <MenuList
+            border="1px"
+            borderColor="#444"
+            color="#ededed"
+            bgColor="#131214"
+          >
             <NextLink href="/" locale="pt-BR">
-              <MenuItem>pt-BR</MenuItem>
+              <MenuItem
+                _hover={{ bgColor: '#3c3c4220' }}
+                _focus={{ bgColor: '#3c3c4220' }}
+              >
+                pt-BR
+              </MenuItem>
             </NextLink>
             <NextLink href="/" locale="en">
-              <MenuItem>en</MenuItem>
+              <MenuItem
+                _hover={{ bgColor: '#3c3c4220' }}
+                _focus={{ bgColor: '#3c3c4220' }}
+              >
+                en
+              </MenuItem>
             </NextLink>
           </MenuList>
         </Menu>

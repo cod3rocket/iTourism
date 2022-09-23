@@ -15,22 +15,40 @@ const en: LocalesModel = {
   },
   features: {
     title: {
-      utilities: 'Display city utilities',
-      extras: 'Extras',
+      first: 'Some Text',
+      second: 'Some Text',
+      third: 'Some Text',
+      fourth: 'Some Text',
+      fifth: 'Some Text',
+      sixth: 'Some Text',
     },
-    attractions: 'Display attractions',
-    events: 'Display events',
-    public_utilities: 'Display public utilities',
-    real_time: 'Real-time informations',
-    push_notification: 'Push notification',
-    filter: 'Filter attractions by type',
-    maps: 'Google Maps integration',
-    lang_support: 'Viable in English and Portuguese',
+    infoText: {
+      first:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      second:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      third:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      fourth:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      fifth:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      sixth:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    },
   },
   heading: {
     title: 'Discover the Pioneer North with iTourism',
-    subtitle:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione modi, cumque eos, culpa neque, reprehenderit assumenda atque explicabo molestiae ullam unde iste aut a consequatur nesciunt dolor commodi quod aspernatur.',
+    subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+  },
+  contact: {
+    description: 'Time to contact us is now.',
+    notificationTime: {
+      first: 'now',
+      second: 'yesterday',
+    },
+    notificationMessage:
+      'Did you like what you saw?! Get in contact with our team:',
   },
 };
 
