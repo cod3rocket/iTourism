@@ -1,7 +1,7 @@
 function global() {
   return {
     'html, body': {
-      bg: 'black',
+      bg: '#111213',
     },
   };
 }
