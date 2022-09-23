@@ -77,21 +77,18 @@ function Home() {
           >
             <InfoCard
               icon={HiArchive}
-              title="some text"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit."
+              title={l.features.title.first}
+              text={l.features.infoText.first}
             />
             <InfoCard
               icon={HiArchive}
-              title="some text"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit."
+              title={l.features.title.second}
+              text={l.features.infoText.second}
             />
             <InfoCard
               icon={HiArchive}
-              title="some text"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit."
+              title={l.features.title.third}
+              text={l.features.infoText.third}
             />
           </Flex>
         </VStack>
@@ -107,21 +104,18 @@ function Home() {
           >
             <InfoCard
               icon={HiArchive}
-              title="some text"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit."
+              title={l.features.title.fourth}
+              text={l.features.infoText.fourth}
             />
             <InfoCard
               icon={HiArchive}
-              title="some text"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit."
+              title={l.features.title.fifth}
+              text={l.features.infoText.fifth}
             />
             <InfoCard
               icon={HiArchive}
-              title="some text"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit."
+              title={l.features.title.sixth}
+              text={l.features.infoText.sixth}
             />
           </Flex>
         </VStack>

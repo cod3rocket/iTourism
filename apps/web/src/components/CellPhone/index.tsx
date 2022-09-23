@@ -1,9 +1,12 @@
 import { SiRocketdotchat } from 'react-icons/si';
 
 import { Flex, Box, Text, Icon, Link } from '@chakra-ui/react';
+import { useLang } from 'hooks/useLang';
 import NextLink from 'next/link';
 
 function CellPhone() {
+  const { l } = useLang();
+
   return (
     <Flex
       w="1000px"
@@ -46,7 +49,7 @@ function CellPhone() {
             17:01
           </Text>
           <Text letterSpacing="wide" fontSize="xs" color="#a8a8b3" mt="-8">
-            Time to contact is now.
+            {l.contact.description}
           </Text>
         </Flex>
 
@@ -66,11 +69,11 @@ function CellPhone() {
                 </Text>
               </Flex>
               <Text fontSize="xs" color="#a8a8b3">
-                now
+                {l.contact.notificationTime.first}
               </Text>
             </Flex>
             <Text fontSize="sm" noOfLines={2} color="#ededed">
-              Gostou do que viu?! Entre em contato com nossa equipe:{' '}
+              {l.contact.notificationMessage}{' '}
               <NextLink href="https://github.com/cod3rocket">
                 <Link href="https://github.com/cod3rocket">Cod3Rocket</Link>
               </NextLink>
@@ -93,7 +96,7 @@ function CellPhone() {
                 </Text>
               </Flex>
               <Text fontSize="xs" color="#a8a8b3">
-                yesterday
+                {l.contact.notificationTime.second}
               </Text>
             </Flex>
           </Flex>
