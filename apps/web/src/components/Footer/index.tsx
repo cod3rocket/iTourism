@@ -1,6 +1,6 @@
 import { RiHeartFill } from 'react-icons/ri';
 
-import { Center, Icon, Text, Link, Heading, Flex } from '@chakra-ui/react';
+import { Center, Icon, Text, Link } from '@chakra-ui/react';
 import { useLang } from 'hooks/useLang';
 
 function Footer() {
