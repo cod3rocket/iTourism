@@ -27,9 +27,9 @@ function Header() {
       w="100%"
       bg="rgba(18, 18, 20, 0.75)"
       borderBottom="1px"
-      borderBottomColor="borders"
+      borderBottomColor="#323238"
     >
-      <Flex align="center" justify="space-between" w="1200px" h="80px">
+      <Flex align="center" justify="space-between" w="1000px" h="80px">
         <Box>
           <NextLink href="/" passHref>
             <Link
@@ -38,7 +38,7 @@ function Header() {
               }}
               href="/"
             >
-              <Heading color="white">
+              <Heading color="#ededed">
                 <Text as="span" color="red.400" fontWeight="bold">
                   .
                 </Text>
