@@ -1,4 +1,4 @@
-import { HiChevronDoubleRight } from 'react-icons/hi';
+import { HiChevronDoubleRight, HiArchive } from 'react-icons/hi';
 
 import {
   Flex,
@@ -9,8 +9,10 @@ import {
   Box,
   Icon,
 } from '@chakra-ui/react';
+import { CellPhone } from 'components/CellPhone';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
+import { InfoCard } from 'components/InfoCard';
 import { useLang } from 'hooks/useLang';
 import Head from 'next/head';
 import NextImage from 'next/image';
@@ -23,103 +25,111 @@ function Home() {
       <Head>
         <title>iTourism</title>
       </Head>
+
       <VStack maxH="100vh" w="full">
         <Header />
-        <Flex paddingY="8" w="1240px" justify="space-around" align="center">
+        <Flex paddingY="8" w="1000px" justify="space-between" align="center">
           <Box>
-            <Flex gap="4" w="96" flexDir="column">
-              <Heading as="h1">{l.heading.title}</Heading>
-              <Text>{l.heading.subtitle}</Text>
+            <Flex gap="4" maxW="sm" flexDir="column">
+              <Heading as="h1" fontSize="xxx-large" color="#ededed">
+                {l.heading.title}
+              </Heading>
+              <Text color="#a8a8b3">{l.heading.subtitle}</Text>
             </Flex>
-            <Button
-              mt="4"
-              display="flex"
-              justifyContent="start"
-              alignItems="center"
-              gap="2"
-              _hover={{
-                gap: '4',
-              }}
-            >
-              Download
-              <Icon as={HiChevronDoubleRight} />
-            </Button>
+            <Box w="min-content">
+              <Button
+                colorScheme="blackAlpha"
+                pl="-4"
+                pr="-4"
+                bgColor="transparent"
+                mt="4"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                gap="2"
+                opacity="0.8"
+                color="#ededed"
+                _hover={{
+                  opacity: '1',
+                }}
+              >
+                <Text fontSize="xl">Download</Text>
+                <Icon fontSize="lg" as={HiChevronDoubleRight} />
+              </Button>
+              <Box h="1px" w="full" bgColor="#323238" />
+            </Box>
           </Box>
-
           <Box>
-            <NextImage src="/assets/example7.png" width="348" height="457" />
+            <NextImage src="/assets/example7.png" width="540" height="457" />
           </Box>
         </Flex>
       </VStack>
 
-      <Box as="section" id="features">
+      <Box id="features" my="4">
         <VStack w="full">
-          <Flex paddingY="8" w="1240px" justify="space-around" align="center">
-            <Box>
-              <NextImage src="/assets/example7.png" width="348" height="457" />
-            </Box>
-
-            <Flex gap="4" w="96" flexDir="column">
-              <Heading as="h1">{l.features.title.utilities}</Heading>
-              <Flex flexDir="row" align="center" justify="space-between">
-                <Box
-                  display="flex"
-                  flexDir="column"
-                  alignContent="center"
-                  justifyContent="space-between"
-                  gap="4"
-                >
-                  <Text fontSize="lg">{l.features.attractions}</Text>
-                  <Text fontSize="lg">{l.features.events}</Text>
-                </Box>
-
-                <Box
-                  display="flex"
-                  flexDir="column"
-                  alignContent="center"
-                  justifyContent="space-between"
-                  gap="4"
-                >
-                  <Text fontSize="lg">{l.features.public_utilities}</Text>
-                  <Text fontSize="lg">{l.features.real_time}</Text>
-                </Box>
-              </Flex>
-            </Flex>
+          <Flex
+            paddingTop="16"
+            paddingBottom="8"
+            w="1000px"
+            gap="16"
+            justify="space-between"
+            align="center"
+          >
+            <InfoCard
+              icon={HiArchive}
+              title="some text"
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit."
+            />
+            <InfoCard
+              icon={HiArchive}
+              title="some text"
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit."
+            />
+            <InfoCard
+              icon={HiArchive}
+              title="some text"
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit."
+            />
           </Flex>
         </VStack>
 
         <VStack w="full">
-          <Flex paddingY="8" w="1240px" justify="space-around" align="center">
-            <Flex gap="4" w="96" flexDir="column">
-              <Heading as="h1">{l.features.title.extras}</Heading>
-              <Flex flexDir="row" align="center" justify="space-between">
-                <Box
-                  display="flex"
-                  flexDir="column"
-                  alignContent="center"
-                  justifyContent="space-between"
-                  gap="4"
-                >
-                  <Text fontSize="lg">{l.features.maps}</Text>
-                  <Text fontSize="lg">{l.features.push_notification}</Text>
-                </Box>
-
-                <Box
-                  display="flex"
-                  flexDir="column"
-                  alignContent="center"
-                  justifyContent="space-between"
-                  gap="4"
-                >
-                  <Text fontSize="lg">{l.features.filter}</Text>
-                  <Text fontSize="lg">{l.features.lang_support}</Text>
-                </Box>
-              </Flex>
-            </Flex>
-            <Box>
-              <NextImage src="/assets/example7.png" width="348" height="457" />
-            </Box>
+          <Flex
+            paddingTop="8"
+            paddingBottom="16"
+            w="1000px"
+            gap="16"
+            justify="space-between"
+            align="center"
+          >
+            <InfoCard
+              icon={HiArchive}
+              title="some text"
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit."
+            />
+            <InfoCard
+              icon={HiArchive}
+              title="some text"
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit."
+            />
+            <InfoCard
+              icon={HiArchive}
+              title="some text"
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit."
+            />
           </Flex>
+        </VStack>
+      </Box>
+
+      <Box id="contact">
+        <VStack w="full" px="16">
+          <CellPhone />
         </VStack>
       </Box>
 
