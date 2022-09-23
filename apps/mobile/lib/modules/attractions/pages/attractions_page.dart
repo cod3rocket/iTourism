@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:itourism_mobile/config/i18n.dart';
+import 'package:itourism_mobile/modules/attractions/components/select_attraction_type.dart';
 import 'package:localization/localization.dart';
 import 'package:starbase/starbase.dart';
 
@@ -50,11 +51,7 @@ class AttractionsPage extends StatelessWidget {
                         children: [
                           Text(
                             I18nWords.attractionsPageHighlights.i18n(),
-                            style: const TextStyle(
-                              fontSize: 22.0,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 1.4,
-                            ),
+                            style: Theme.of(context).textTheme.headline6,
                           ),
                         ],
                       ),
@@ -91,15 +88,20 @@ class AttractionsPage extends StatelessWidget {
                         },
                       ),
                     ),
+                    SelectAttractionType(
+                      selectedType: attractionsController.selectedType,
+                      onSelected: attractionsController.selectAttractionType,
+                    ),
                     Flexible(
                       child: ListView.builder(
                         scrollDirection: Axis.vertical,
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
-                        itemCount: attractionsController.attractions.length,
+                        itemCount:
+                            attractionsController.attractionsByType.length,
                         itemBuilder: (context, index) {
                           final attractions =
-                              attractionsController.attractions[index];
+                              attractionsController.attractionsByType[index];
 
                           return ListCard(
                             title: attractions.name,
