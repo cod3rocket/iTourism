@@ -15,7 +15,12 @@ function InfoCard({ icon, title, text }: InfoCardProps) {
       <Heading my="2" fontSize="lg" color="#ededed">
         {title}
       </Heading>
-      <Text fontSize="md" color="#a8a8b3" textAlign="justify">
+      <Text
+        maxInlineSize="xs"
+        fontSize="md"
+        color="#a8a8b3"
+        textAlign="justify"
+      >
         {text}
       </Text>
     </Flex>

@@ -87,57 +87,44 @@ function Home() {
 
       <Box w="100%" id="features" my="4">
         <VStack w="full">
-          <Flex
-            paddingTop="16"
-            paddingBottom="8"
+          <SimpleGrid
             w="1000px"
+            columns={{ base: 1, md: 2, lg: 3 }}
             gap="16"
-            justify="space-between"
-            align="center"
+            justifyContent="space-between"
+            alignItems="center"
           >
             <InfoCard
               icon={HiArchive}
-              title={l.features.title.first}
-              text={l.features.infoText.first}
-            />
-            <InfoCard
-              icon={HiArchive}
-              title={l.features.title.second}
-              text={l.features.infoText.second}
-            />
-            <InfoCard
-              icon={HiArchive}
-              title={l.features.title.third}
-              text={l.features.infoText.third}
-            />
-          </Flex>
-        </VStack>
-
-        <VStack w="full">
-          <Flex
-            paddingTop="8"
-            paddingBottom="16"
-            w="1000px"
-            gap="16"
-            justify="space-between"
-            align="center"
-          >
-            <InfoCard
-              icon={HiArchive}
-              title={l.features.title.fourth}
-              text={l.features.infoText.fourth}
-            />
-            <InfoCard
-              icon={HiArchive}
-              title={l.features.title.fifth}
-              text={l.features.infoText.fifth}
+              title={l.features.title.sixth}
+              text={l.features.infoText.sixth}
             />
             <InfoCard
               icon={HiArchive}
               title={l.features.title.sixth}
               text={l.features.infoText.sixth}
             />
-          </Flex>
+            <InfoCard
+              icon={HiArchive}
+              title={l.features.title.sixth}
+              text={l.features.infoText.sixth}
+            />
+            <InfoCard
+              icon={HiArchive}
+              title={l.features.title.sixth}
+              text={l.features.infoText.sixth}
+            />
+            <InfoCard
+              icon={HiArchive}
+              title={l.features.title.sixth}
+              text={l.features.infoText.sixth}
+            />
+            <InfoCard
+              icon={HiArchive}
+              title={l.features.title.sixth}
+              text={l.features.infoText.sixth}
+            />
+          </SimpleGrid>
         </VStack>
       </Box>
 
