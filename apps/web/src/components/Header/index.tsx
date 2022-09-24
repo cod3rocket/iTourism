@@ -43,11 +43,11 @@ function Header() {
     <>
       <Drawer isOpen={isOpen} onClose={onClose} size="full" closeOnEsc>
         <DrawerOverlay>
-          <DrawerContent bg="gray.800" p="4">
-            <DrawerCloseButton color="white" mt="6" />
+          <DrawerContent bg="#111213" p="4">
+            <DrawerCloseButton color="#ededed" mt="6" />
             <Flex display="flex" flexDir="column" alignItems="center" mt="16%">
-              <DrawerHeader color="white">Navigation</DrawerHeader>
-              <DrawerBody color="white">
+              <DrawerHeader color="#ededed">Navigation</DrawerHeader>
+              <DrawerBody color="#a8a8b3">
                 <NextLink href="#features" passHref>
                   <Link
                     color="#a8a8b3"
@@ -59,7 +59,7 @@ function Header() {
                   </Link>
                 </NextLink>
               </DrawerBody>
-              <DrawerBody color="white">
+              <DrawerBody color="#a8a8b3">
                 <NextLink href="#contact" passHref>
                   <Link
                     color="#a8a8b3"
@@ -72,17 +72,17 @@ function Header() {
                 </NextLink>
               </DrawerBody>
 
-              <DrawerHeader mt="8" color="white">
+              <DrawerHeader mt="8" color="#ededed">
                 Language
               </DrawerHeader>
-              <DrawerBody color="white">
+              <DrawerBody color="#a8a8b3">
                 <NextLink href="/" locale="en">
                   <Link color="#a8a8b3" fontSize="lg" fontWeight="md" href="/">
                     en
                   </Link>
                 </NextLink>
               </DrawerBody>
-              <DrawerBody color="white">
+              <DrawerBody color="#a8a8b3">
                 <NextLink href="/" locale="pt-BR">
                   <Link color="#a8a8b3" fontSize="lg" fontWeight="md" href="/">
                     pt-BR
