@@ -100,8 +100,8 @@ function Header() {
         borderBottom="1px"
         borderBottomColor="#323238"
       >
-        <Flex align="center" justify="space-between" w="1000px" h="80px">
-          <Box ml={['2', '2', '2', '0']}>
+        <Flex px="8" align="center" justify="space-between" w="1000px" h="80px">
+          <Box>
             <NextLink href="/" passHref>
               <Link
                 _hover={{
@@ -169,7 +169,6 @@ function Header() {
               fontSize="xl"
               variant="unstyled"
               onClick={onOpen}
-              mr="2"
               mt="2"
             />
           )}

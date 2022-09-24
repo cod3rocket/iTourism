@@ -30,6 +30,7 @@ function Home() {
       <VStack maxH="100vh" w="100%">
         <Header />
         <Flex
+          px="8"
           paddingY="8"
           w="1000px"
           flexDir={{ base: 'column', lg: 'row' }}
@@ -88,9 +89,11 @@ function Home() {
       <Box w="100%" id="features" my="4">
         <VStack w="full">
           <SimpleGrid
+            my={{ base: '2', lg: '16' }}
+            px="8"
             w="1000px"
-            columns={{ base: 1, md: 2, lg: 3 }}
-            gap="16"
+            columns={{ base: 1, lg: 3 }}
+            gap={{ base: '12', lg: '16' }}
             justifyContent="space-between"
             alignItems="center"
           >
@@ -129,7 +132,7 @@ function Home() {
       </Box>
 
       <Box w="100%" id="contact">
-        <VStack w="full" px="16">
+        <VStack w="full" px="8">
           <CellPhone />
         </VStack>
       </Box>
