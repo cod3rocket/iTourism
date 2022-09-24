@@ -8,6 +8,7 @@ import {
   Button,
   Box,
   Icon,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import { CellPhone } from 'components/CellPhone';
 import Footer from 'components/Footer';
@@ -26,16 +27,34 @@ function Home() {
         <title>iTourism</title>
       </Head>
 
-      <VStack maxH="100vh" w="full">
+      <VStack maxH="100vh" w="100%">
         <Header />
-        <Flex paddingY="8" w="1000px" justify="space-between" align="center">
-          <Box>
+        <Flex
+          paddingY="8"
+          w="1000px"
+          flexDir={{ base: 'column', lg: 'row' }}
+          justify="space-between"
+          align="center"
+        >
+          <Flex
+            w={{ base: '75%', lg: '50%' }}
+            flexDir="column"
+            align={{ base: 'center', lg: 'start' }}
+          >
             <Flex gap="4" maxW="sm" flexDir="column">
-              <Heading as="h1" fontSize="xxx-large" color="#ededed">
+              <Heading
+                textAlign={{ base: 'center', lg: 'start' }}
+                as="h1"
+                fontSize="xxx-large"
+                color="#ededed"
+              >
                 {l.heading.title}
               </Heading>
-              <Text color="#a8a8b3">{l.heading.subtitle}</Text>
+              <Text textAlign={{ base: 'center', lg: 'start' }} color="#a8a8b3">
+                {l.heading.subtitle}
+              </Text>
             </Flex>
+
             <Box w="min-content">
               <Button
                 colorScheme="blackAlpha"
@@ -58,14 +77,15 @@ function Home() {
               </Button>
               <Box h="1px" w="full" bgColor="#323238" />
             </Box>
-          </Box>
-          <Box>
-            <NextImage src="/assets/example7.png" width="540" height="457" />
-          </Box>
+          </Flex>
+
+          <Flex w="50%" align="center" justify="center">
+            image
+          </Flex>
         </Flex>
       </VStack>
 
-      <Box id="features" my="4">
+      <Box w="100%" id="features" my="4">
         <VStack w="full">
           <Flex
             paddingTop="16"
@@ -121,7 +141,7 @@ function Home() {
         </VStack>
       </Box>
 
-      <Box id="contact">
+      <Box w="100%" id="contact">
         <VStack w="full" px="16">
           <CellPhone />
         </VStack>
