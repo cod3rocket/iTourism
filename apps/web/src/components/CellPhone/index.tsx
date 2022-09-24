@@ -10,9 +10,10 @@ function CellPhone() {
   return (
     <Flex
       w="1000px"
-      h="md"
+      h={{ base: 'sm', sm: 'md' }}
       paddingTop="8"
       mb="8"
+      px={{ base: '6', sm: '0' }}
       justify="center"
       align="center"
       borderBottom="8px"
@@ -45,10 +46,15 @@ function CellPhone() {
         </Flex>
 
         <Flex flexDir="column" align="center">
-          <Text fontSize="8xl" color="#a8a8b3">
+          <Text fontSize={{ base: '7xl', sm: '8xl' }} color="#a8a8b3">
             17:01
           </Text>
-          <Text letterSpacing="wide" fontSize="xs" color="#a8a8b3" mt="-8">
+          <Text
+            letterSpacing="wide"
+            fontSize="xs"
+            color="#a8a8b3"
+            mt={{ base: '-6', sm: '-8' }}
+          >
             {l.contact.description}
           </Text>
         </Flex>
@@ -64,7 +70,11 @@ function CellPhone() {
             >
               <Flex flexDir="row" gap="2" align="center" justify="center">
                 <Icon as={SiRocketdotchat} color="#a9abb7" />
-                <Text letterSpacing="0.75px" fontSize="sm" color="#a8a8b3">
+                <Text
+                  letterSpacing="0.75px"
+                  fontSize={{ base: 'xs', sm: 'sm' }}
+                  color="#a8a8b3"
+                >
                   iTourism
                 </Text>
               </Flex>
@@ -72,7 +82,12 @@ function CellPhone() {
                 {l.contact.notificationTime.first}
               </Text>
             </Flex>
-            <Text fontSize="sm" noOfLines={2} color="#ededed">
+            <Text
+              mt={{ base: '1', sm: '0' }}
+              fontSize={{ base: 'xs', sm: 'sm' }}
+              noOfLines={2}
+              color="#ededed"
+            >
               {l.contact.notificationMessage}{' '}
               <NextLink href="https://github.com/cod3rocket">
                 <Link href="https://github.com/cod3rocket">Cod3Rocket</Link>
@@ -91,12 +106,16 @@ function CellPhone() {
             >
               <Flex flexDir="row" gap="2" align="center" justify="center">
                 <Icon as={SiRocketdotchat} color="#a9abb7" />
-                <Text letterSpacing="0.75px" fontSize="sm" color="#a8a8b3">
+                <Text
+                  letterSpacing="0.75px"
+                  fontSize={{ base: 'xs', sm: 'sm' }}
+                  color="#a8a8b3"
+                >
                   iTourism
                 </Text>
               </Flex>
               <Text fontSize="xs" color="#a8a8b3">
-                {l.contact.notificationTime.second}
+                {l.contact.notificationTime.first}
               </Text>
             </Flex>
           </Flex>
