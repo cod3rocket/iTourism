@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:itourism_mobile/config/i18n.dart';
 import 'package:itourism_mobile/modules/attractions/models/attraction_model.dart';
 import 'package:localization/localization.dart';
@@ -54,7 +55,7 @@ class SelectAttractionType extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           child: Text(
-            'Select attraction type',
+            I18nWords.selectAttractionTypeHeader.i18n(),
             style: Theme.of(context).textTheme.headline6,
           ),
         ),

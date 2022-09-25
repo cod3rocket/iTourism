@@ -16,6 +16,7 @@ class I18nWords {
   static String attractionsDetailsPageLocation =
       'attractions-details-page-location';
 
+  static String selectAttractionTypeHeader = 'select-attraction-type-header';
   static String attractionTypeAll = 'attraction-type-all';
   static String attractionTypeAttraction = 'attraction-type-attraction';
   static String attractionTypeBars = 'attraction-type-bars';
