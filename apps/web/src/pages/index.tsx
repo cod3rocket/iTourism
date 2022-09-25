@@ -8,6 +8,7 @@ import {
   Button,
   Box,
   Icon,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import { CellPhone } from 'components/CellPhone';
 import Footer from 'components/Footer';
@@ -26,16 +27,35 @@ function Home() {
         <title>iTourism</title>
       </Head>
 
-      <VStack maxH="100vh" w="full">
+      <VStack maxH="100vh" w="100%">
         <Header />
-        <Flex paddingY="8" w="1000px" justify="space-between" align="center">
-          <Box>
+        <Flex
+          px="8"
+          paddingY="8"
+          w="1000px"
+          flexDir={{ base: 'column', lg: 'row' }}
+          justify="space-between"
+          align="center"
+        >
+          <Flex
+            w={{ base: '75%', lg: '50%' }}
+            flexDir="column"
+            align={{ base: 'center', lg: 'start' }}
+          >
             <Flex gap="4" maxW="sm" flexDir="column">
-              <Heading as="h1" fontSize="xxx-large" color="#ededed">
+              <Heading
+                textAlign={{ base: 'center', lg: 'start' }}
+                as="h1"
+                fontSize="xxx-large"
+                color="#ededed"
+              >
                 {l.heading.title}
               </Heading>
-              <Text color="#a8a8b3">{l.heading.subtitle}</Text>
+              <Text textAlign={{ base: 'center', lg: 'start' }} color="#a8a8b3">
+                {l.heading.subtitle}
+              </Text>
             </Flex>
+
             <Box w="min-content">
               <Button
                 colorScheme="blackAlpha"
@@ -58,71 +78,61 @@ function Home() {
               </Button>
               <Box h="1px" w="full" bgColor="#323238" />
             </Box>
-          </Box>
-          <Box>
-            <NextImage src="/assets/example7.png" width="540" height="457" />
-          </Box>
+          </Flex>
+
+          <Flex w="50%" align="center" justify="center">
+            image
+          </Flex>
         </Flex>
       </VStack>
 
-      <Box id="features" my="4">
+      <Box w="100%" id="features" my="4">
         <VStack w="full">
-          <Flex
-            paddingTop="16"
-            paddingBottom="8"
+          <SimpleGrid
+            my={{ base: '2', lg: '16' }}
+            px="8"
             w="1000px"
-            gap="16"
-            justify="space-between"
-            align="center"
+            columns={{ base: 1, lg: 3 }}
+            gap={{ base: '12', lg: '16' }}
+            justifyContent="space-between"
+            alignItems="center"
           >
             <InfoCard
               icon={HiArchive}
-              title={l.features.title.first}
-              text={l.features.infoText.first}
-            />
-            <InfoCard
-              icon={HiArchive}
-              title={l.features.title.second}
-              text={l.features.infoText.second}
-            />
-            <InfoCard
-              icon={HiArchive}
-              title={l.features.title.third}
-              text={l.features.infoText.third}
-            />
-          </Flex>
-        </VStack>
-
-        <VStack w="full">
-          <Flex
-            paddingTop="8"
-            paddingBottom="16"
-            w="1000px"
-            gap="16"
-            justify="space-between"
-            align="center"
-          >
-            <InfoCard
-              icon={HiArchive}
-              title={l.features.title.fourth}
-              text={l.features.infoText.fourth}
-            />
-            <InfoCard
-              icon={HiArchive}
-              title={l.features.title.fifth}
-              text={l.features.infoText.fifth}
+              title={l.features.title.sixth}
+              text={l.features.infoText.sixth}
             />
             <InfoCard
               icon={HiArchive}
               title={l.features.title.sixth}
               text={l.features.infoText.sixth}
             />
-          </Flex>
+            <InfoCard
+              icon={HiArchive}
+              title={l.features.title.sixth}
+              text={l.features.infoText.sixth}
+            />
+            <InfoCard
+              icon={HiArchive}
+              title={l.features.title.sixth}
+              text={l.features.infoText.sixth}
+            />
+            <InfoCard
+              icon={HiArchive}
+              title={l.features.title.sixth}
+              text={l.features.infoText.sixth}
+            />
+            <InfoCard
+              icon={HiArchive}
+              title={l.features.title.sixth}
+              text={l.features.infoText.sixth}
+            />
+          </SimpleGrid>
         </VStack>
       </Box>
 
-      <Box id="contact">
-        <VStack w="full" px="16">
+      <Box w="100%" id="contact">
+        <VStack w="full" px="8">
           <CellPhone />
         </VStack>
       </Box>

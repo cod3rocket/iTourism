@@ -18,7 +18,11 @@ function Footer() {
       gap="2"
       minH="32"
     >
-      <Text color="#a8a8b3" fontSize="md" textAlign="center">
+      <Text
+        color="#a8a8b3"
+        fontSize={{ base: 'sm', sm: 'md' }}
+        textAlign="center"
+      >
         {l.footer.accomplishment.first}{' '}
         <Icon as={RiHeartFill} color="red.500" />{' '}
         {l.footer.accomplishment.second}{' '}
@@ -34,7 +38,12 @@ function Footer() {
           eduardoteles17
         </Link>
       </Text>
-      <Text mb="-4" fontSize="sm" color="#a8a8b3" textAlign="center">
+      <Text
+        mb="-4"
+        fontSize={{ base: 'xs', sm: 'sm' }}
+        color="#a8a8b3"
+        textAlign="center"
+      >
         © 2022{' '}
         <Link href="https://github.com/cod3rocket" color="#edededdd" isExternal>
           Cod3Rocket
