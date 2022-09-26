@@ -27,11 +27,12 @@ function Home() {
         <title>iTourism</title>
       </Head>
 
-      <VStack maxH="100vh" w="100%">
+      <VStack w="100%">
         <Header />
         <Flex
           px="8"
-          paddingY="8"
+          pt="12"
+          pb="4"
           w="1000px"
           flexDir={{ base: 'column', lg: 'row' }}
           justify="space-between"
@@ -80,13 +81,24 @@ function Home() {
             </Box>
           </Flex>
 
-          <Flex w="50%" align="center" justify="center">
-            image
+          <Flex
+            w="50%"
+            h="326"
+            align="center"
+            justify="center"
+            overflow="hidden"
+            mt={{ base: '16', lg: '0' }}
+          >
+            <NextImage
+              src="/assets/mock_app_image.png"
+              width="429"
+              height="326"
+            />
           </Flex>
         </Flex>
       </VStack>
 
-      <Box w="100%" id="features" my="4">
+      <Box w="100%" id="features" my="2">
         <VStack w="full">
           <SimpleGrid
             my={{ base: '2', lg: '16' }}
