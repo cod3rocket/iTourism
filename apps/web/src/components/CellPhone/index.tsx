@@ -1,7 +1,6 @@
-import { SiRocketdotchat } from 'react-icons/si';
-
-import { Flex, Box, Text, Icon, Link } from '@chakra-ui/react';
+import { Flex, Box, Text, Link } from '@chakra-ui/react';
 import { useLang } from 'hooks/useLang';
+import NextImage from 'next/image';
 import NextLink from 'next/link';
 
 function CellPhone() {
@@ -69,7 +68,8 @@ function CellPhone() {
               mb="1"
             >
               <Flex flexDir="row" gap="2" align="center" justify="center">
-                <Icon as={SiRocketdotchat} color="#a9abb7" />
+                {/* <Icon as={SiRocketdotchat} color="#a9abb7" /> */}
+                <NextImage src="/favicon.ico" width="15" height="15" />
                 <Text
                   letterSpacing="0.75px"
                   fontSize={{ base: 'xs', sm: 'sm' }}
@@ -105,7 +105,7 @@ function CellPhone() {
               mb="1"
             >
               <Flex flexDir="row" gap="2" align="center" justify="center">
-                <Icon as={SiRocketdotchat} color="#a9abb7" />
+                <NextImage src="/favicon.ico" width="15" height="15" />
                 <Text
                   letterSpacing="0.75px"
                   fontSize={{ base: 'xs', sm: 'sm' }}

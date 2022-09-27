@@ -88,11 +88,14 @@ function Home() {
             justify="center"
             overflow="hidden"
             mt={{ base: '16', lg: '0' }}
+            px={{ base: '16', sm: '0' }}
           >
             <NextImage
               src="/assets/mock_app_image.png"
               width="429"
               height="326"
+              quality={100}
+              priority
             />
           </Flex>
         </Flex>
