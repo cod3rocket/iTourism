@@ -115,7 +115,7 @@ function CellPhone() {
                 </Text>
               </Flex>
               <Text fontSize="xs" color="#a8a8b3">
-                {l.contact.notificationTime.first}
+                {l.contact.notificationTime.second}
               </Text>
             </Flex>
           </Flex>

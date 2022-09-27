@@ -2,6 +2,10 @@ interface LocalesModel {
   header: {
     features: string;
     contact: string;
+    drawer: {
+      languages: string;
+      navigation: string;
+    };
   };
   footer: {
     accomplishment: {
