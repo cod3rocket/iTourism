@@ -19,31 +19,31 @@ const en: LocalesModel = {
   },
   features: {
     title: {
-      first: 'Some Text',
-      second: 'Some Text',
-      third: 'Some Text',
-      fourth: 'Some Text',
-      fifth: 'Some Text',
-      sixth: 'Some Text',
+      first: 'Your city here',
+      second: 'Public Utility',
+      third: 'Push notification',
+      fourth: 'Third-party integrations',
+      fifth: 'Segurity',
+      sixth: 'Confidence',
     },
     infoText: {
       first:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        'Within iTourism we present all the attractions and events that, in partnership with the city hall, we make available to everyone.',
       second:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        'At iTourism you will find the main public utilities of the city, ensuring easy access to municipal utilities.',
       third:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        'We provide all users with notifications updating about city events, attractions and promotions on the most diverse shops in the region.',
       fourth:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        'We integrate services such as Google Maps into the application, for a better and more pleasant experience.',
       fifth:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        'The information is updated daily and assigned to the application in real time by our team, in partnership with the city hall, ensuring the security and veracity of the information.',
       sixth:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        "iTourism is more than a travel guide, it's a team where you can count on us to ease your way to success.",
     },
   },
   heading: {
     title: 'Discover the Pioneer North with iTourism',
-    subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    subtitle: 'Travel with us, make your destiny.',
   },
   contact: {
     description: 'Time to contact us is now.',

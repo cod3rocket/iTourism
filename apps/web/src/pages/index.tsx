@@ -22,7 +22,6 @@ import { InfoCard } from 'components/InfoCard';
 import { useLang } from 'hooks/useLang';
 import Head from 'next/head';
 import NextImage from 'next/image';
-import NextLink from 'next/link';
 
 function Home() {
   const { l } = useLang();

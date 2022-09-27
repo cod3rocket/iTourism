@@ -19,31 +19,31 @@ const pt_br: LocalesModel = {
   },
   features: {
     title: {
-      first: 'Some Text',
-      second: 'Some Text',
-      third: 'Some Text',
-      fourth: 'Some Text',
-      fifth: 'Some Text',
-      sixth: 'Some Text',
+      first: 'Sua cidade aqui',
+      second: 'Utilidade pública',
+      third: 'Notificações push',
+      fourth: 'Integração com terceiros',
+      fifth: 'Segurança',
+      sixth: 'Confiança',
     },
     infoText: {
       first:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        'Dentro do iTourism apresentamos todas as atrações e eventos que, em parceria com a prefeitura, disponibilizamos à todos.',
       second:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        'No iTourism você encontra as principais utilidades públicas da cidade, garantindo fácil acesso aos órgãos municipais.',
       third:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        'Disponibilizamos a todos usuários notificações atualizando sobre eventos da cidade, atrações e promoções sobre os mais diversos comércios da região.',
       fourth:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        'Integramos ao aplicativo serviços como Google Maps, para uma melhor e mais agradável experiência.',
       fifth:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        'Diariamente são atualizadas as informações e atribuídas ao aplicativo em tempo real pela nossa equipe, em parceria com a prefeitura, garantindo a segurança e veracidade das informações.',
       sixth:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        'O iTourism é mais do que um guia de viagens, é uma equipe onde você pode contar com a gente para facilitar seu caminho até o sucesso.',
     },
   },
   heading: {
     title: 'Descubra o Norte Pioneiro com iTourism',
-    subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    subtitle: 'Viaje conosco, construa seu destino.',
   },
   contact: {
     description: 'Entre em contato agora.',
