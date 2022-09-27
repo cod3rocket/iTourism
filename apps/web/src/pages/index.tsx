@@ -1,4 +1,8 @@
-import { HiChevronDoubleRight, HiArchive } from 'react-icons/hi';
+import { AiFillMessage } from 'react-icons/ai';
+import { BsShieldFillCheck } from 'react-icons/bs';
+import { FaHandshake, FaCity, FaMapMarked } from 'react-icons/fa';
+import { HiChevronDoubleRight } from 'react-icons/hi';
+import { MdPeopleAlt } from 'react-icons/md';
 
 import {
   Flex,
@@ -114,35 +118,35 @@ function Home() {
             columns={{ base: 1, lg: 3 }}
             gap={{ base: '12', lg: '16' }}
             justifyContent="space-between"
-            alignItems="center"
+            alignItems="start"
           >
             <InfoCard
-              icon={HiArchive}
-              title={l.features.title.sixth}
-              text={l.features.infoText.sixth}
+              icon={FaCity}
+              title={l.features.title.first}
+              text={l.features.infoText.first}
             />
             <InfoCard
-              icon={HiArchive}
-              title={l.features.title.sixth}
-              text={l.features.infoText.sixth}
+              icon={MdPeopleAlt}
+              title={l.features.title.second}
+              text={l.features.infoText.second}
             />
             <InfoCard
-              icon={HiArchive}
-              title={l.features.title.sixth}
-              text={l.features.infoText.sixth}
+              icon={AiFillMessage}
+              title={l.features.title.third}
+              text={l.features.infoText.third}
             />
             <InfoCard
-              icon={HiArchive}
-              title={l.features.title.sixth}
-              text={l.features.infoText.sixth}
+              icon={FaMapMarked}
+              title={l.features.title.fourth}
+              text={l.features.infoText.fourth}
             />
             <InfoCard
-              icon={HiArchive}
-              title={l.features.title.sixth}
-              text={l.features.infoText.sixth}
+              icon={BsShieldFillCheck}
+              title={l.features.title.fifth}
+              text={l.features.infoText.fifth}
             />
             <InfoCard
-              icon={HiArchive}
+              icon={FaHandshake}
               title={l.features.title.sixth}
               text={l.features.infoText.sixth}
             />
