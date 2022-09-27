@@ -9,6 +9,7 @@ import {
   Box,
   Icon,
   SimpleGrid,
+  Link,
 } from '@chakra-ui/react';
 import { CellPhone } from 'components/CellPhone';
 import Footer from 'components/Footer';
@@ -17,6 +18,7 @@ import { InfoCard } from 'components/InfoCard';
 import { useLang } from 'hooks/useLang';
 import Head from 'next/head';
 import NextImage from 'next/image';
+import NextLink from 'next/link';
 
 function Home() {
   const { l } = useLang();
@@ -58,25 +60,27 @@ function Home() {
             </Flex>
 
             <Box w="min-content">
-              <Button
-                colorScheme="blackAlpha"
-                pl="-4"
-                pr="-4"
-                bgColor="transparent"
-                mt="4"
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                gap="2"
-                opacity="0.8"
-                color="#ededed"
-                _hover={{
-                  opacity: '1',
-                }}
-              >
-                <Text fontSize="xl">Download</Text>
-                <Icon fontSize="lg" as={HiChevronDoubleRight} />
-              </Button>
+              <Link href="https://static.itourism.app/download/android.apk">
+                <Button
+                  colorScheme="blackAlpha"
+                  pl="-4"
+                  pr="-4"
+                  bgColor="transparent"
+                  mt="4"
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                  gap="2"
+                  opacity="0.8"
+                  color="#ededed"
+                  _hover={{
+                    opacity: '1',
+                  }}
+                >
+                  <Text fontSize="xl">Download</Text>
+                  <Icon fontSize="lg" as={HiChevronDoubleRight} />
+                </Button>
+              </Link>
               <Box h="1px" w="full" bgColor="#323238" />
             </Box>
           </Flex>
