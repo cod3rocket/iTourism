@@ -23,7 +23,7 @@ const en: LocalesModel = {
       second: 'Public Utility',
       third: 'Push notification',
       fourth: 'Third-party integrations',
-      fifth: 'Segurity',
+      fifth: 'Security',
       sixth: 'Confidence',
     },
     infoText: {
