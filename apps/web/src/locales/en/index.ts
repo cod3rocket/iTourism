@@ -4,6 +4,10 @@ const en: LocalesModel = {
   header: {
     contact: 'Contact',
     features: 'Features',
+    drawer: {
+      languages: 'Languages',
+      navigation: 'Navigation',
+    },
   },
   footer: {
     accomplishment: {

@@ -46,7 +46,9 @@ function Header() {
           <DrawerContent bg="#111213" p="4">
             <DrawerCloseButton color="#ededed" mt="6" />
             <Flex display="flex" flexDir="column" alignItems="center" mt="16%">
-              <DrawerHeader color="#ededed">Navigation</DrawerHeader>
+              <DrawerHeader color="#ededed">
+                {l.header.drawer.navigation}
+              </DrawerHeader>
               <DrawerBody color="#a8a8b3">
                 <NextLink href="#features" passHref>
                   <Link
@@ -73,7 +75,7 @@ function Header() {
               </DrawerBody>
 
               <DrawerHeader mt="8" color="#ededed">
-                Language
+                {l.header.drawer.languages}
               </DrawerHeader>
               <DrawerBody color="#a8a8b3">
                 <NextLink href="/" locale="en">

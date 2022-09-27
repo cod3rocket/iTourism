@@ -4,6 +4,10 @@ const pt_br: LocalesModel = {
   header: {
     contact: 'Contato',
     features: 'Recursos',
+    drawer: {
+      languages: 'Linguagens',
+      navigation: 'Navegação',
+    },
   },
   footer: {
     accomplishment: {
