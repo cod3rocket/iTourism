@@ -21,8 +21,8 @@ class PublicUtilityRepository {
       },
       {
         'id': '2',
-        'name': 'Conselho Tutelephonear',
-        'description': 'Conselho Tutelephonear de Bandeirantes',
+        'name': 'Conselho Tutelar',
+        'description': 'Conselho Tutelar de Bandeirantes',
         'latitude': 0.0,
         'longitude': 0.0,
         'telephone': '4335426582',
