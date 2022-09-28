@@ -1,0 +1,9 @@
+{
+  "name": "@itourism/mobile",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "clean": "just clean",
+    "start:dev": "just start-dev"
+  }
+}

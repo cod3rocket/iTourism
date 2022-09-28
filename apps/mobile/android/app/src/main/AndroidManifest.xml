@@ -1,9 +1,28 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.itourism.itourism_mobile">
+   <queries>
+      <intent>
+        <action android:name="android.intent.action.VIEW" />
+        <data android:scheme="tel" />
+      </intent>
+      <intent>
+        <action android:name="android.intent.action.VIEW" />
+        <data android:scheme="https" />
+      </intent>
+      <intent>
+        <action android:name="android.intent.action.view" />
+        <data android:scheme="comgooglemaps" />
+      </intent>
+   </queries>
    <application
-        android:label="itourism_mobile"
+        android:label="iTourism"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data
+          android:name="com.google.android.geo.API_KEY"
+          android:value="AIzaSyBEFMk4H0rNXx0AlX7mqNkyBxpO0Zi_D8k" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

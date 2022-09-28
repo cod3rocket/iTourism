@@ -1,8 +1,12 @@
-import { PrismaPaginator, serializeCollection } from '@itourism/nestjs';
+import {
+  NotFoundError,
+  PrismaPaginator,
+  serializeCollection,
+} from '@itourism/nestjs';
 import { Injectable } from '@nestjs/common';
-import { NotFoundError } from 'errors/not-found.error';
 import { PrismaService } from 'infra/prisma/prisma.service';
-import { AttractionModel, AttractionType } from 'models/attraction.model';
+import { AttractionModel } from 'models/attraction.model';
+import type { AttractionType } from 'models/attraction.model';
 
 @Injectable()
 export class AttractionsService {
@@ -32,7 +36,7 @@ export class AttractionsService {
     return serializeCollection(attractions, AttractionModel);
   }
 
-  async findOneById(id: string): Promise<AttractionModel> {
+  async findById(id: string): Promise<AttractionModel> {
     const attraction = await this.prismaService.attraction.findUnique({
       where: { id },
       select: {

@@ -1,5 +1,9 @@
 {
+  "cSpell.words": ["asuka", "itourism", "starbase"],
   "dart.runPubGetOnPubspecChanges": false,
+  "files.exclude": {
+    "**/*.g.dart": true
+  },
   "material-icon-theme.activeIconPack": "nest",
   "material-icon-theme.files.associations": {
     "justfile": "makefile",
@@ -10,8 +14,9 @@
     "tsconfig/next.json": "tsconfig"
   },
   "material-icon-theme.folders.associations": {
-    "tsconfig": "typescript",
+    "attractions": "cart",
+    "cities": "home",
     "nestjs": "api",
-    "attractions": "cart"
+    "tsconfig": "typescript"
   }
 }

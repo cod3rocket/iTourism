@@ -2,6 +2,7 @@ DOCKERCOMPOSE_FILE := "docker-compose.dev.yml"
 
 bootstrap:
   @pnpm turbo run bootstrap
+  @melos bootstrap
 
 build:
   @pnpm turbo run build

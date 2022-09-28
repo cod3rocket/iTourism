@@ -1,16 +1,42 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:itourism_mobile/modules/home/home_controller.dart';
+import 'package:itourism_mobile/modules/attractions/attractions_module.dart';
+import 'package:itourism_mobile/modules/events/events_module.dart';
+import 'package:itourism_mobile/modules/public_utility/public_utility_module.dart';
 
-import 'home_page.dart';
+import 'controllers/home_controller.dart';
+import 'pages/home_page.dart';
 
 class HomeModule extends Module {
   @override
+  List<Module> get imports => [
+        AttractionsModule(),
+        EventsModule(),
+      ];
+
+  @override
   final List<Bind> binds = [
-    Bind.factory((i) => HomeController()),
+    Bind.singleton((i) => HomeController()),
   ];
 
   @override
-  final List<ModularRoute> routes = [
-    ChildRoute('/', child: (_, args) => HomePage()),
-  ];
+  List<ModularRoute> get routes => [
+        ChildRoute(
+          '/',
+          child: (_, args) => HomePage(),
+          children: [
+            ModuleRoute(
+              '/attractions',
+              module: AttractionsModule(),
+            ),
+            ModuleRoute(
+              '/events',
+              module: EventsModule(),
+            ),
+            ModuleRoute(
+              '/public-utility',
+              module: PublicUtilityModule(),
+            ),
+          ],
+        ),
+      ];
 }

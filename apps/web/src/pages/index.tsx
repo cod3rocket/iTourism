@@ -1,88 +1,166 @@
-import { GoMarkGithub } from 'react-icons/go';
-import { MdDarkMode, MdLightMode } from 'react-icons/md';
-import { RiHeartFill } from 'react-icons/ri';
+import { AiFillMessage } from 'react-icons/ai';
+import { BsShieldFillCheck } from 'react-icons/bs';
+import { FaHandshake, FaCity, FaMapMarked } from 'react-icons/fa';
+import { HiChevronDoubleRight } from 'react-icons/hi';
+import { MdPeopleAlt } from 'react-icons/md';
 
 import {
-  ButtonGroup,
-  Center,
+  Flex,
   Heading,
-  Icon,
-  IconButton,
-  Link,
-  Progress,
-  Text,
-  useColorMode,
   VStack,
+  Text,
+  Button,
+  Box,
+  Icon,
+  SimpleGrid,
+  Link,
 } from '@chakra-ui/react';
+import { CellPhone } from 'components/CellPhone';
+import Footer from 'components/Footer';
+import Header from 'components/Header';
+import { InfoCard } from 'components/InfoCard';
+import { useLang } from 'hooks/useLang';
 import Head from 'next/head';
+import NextImage from 'next/image';
 
 function Home() {
-  const colorMode = useColorMode();
-
-  const isDarkTheme = colorMode.colorMode === 'dark';
+  const { l } = useLang();
 
   return (
-    <VStack w="full" minH="100vh" justifyContent="space-between">
+    <>
       <Head>
-        <title>iTurism</title>
+        <title>iTourism</title>
       </Head>
-      <ButtonGroup
-        as="header"
-        w="full"
-        p={{
-          base: '4',
-          md: '8',
-        }}
-        justifyContent="end"
-        variant="ghost"
-        size="lg"
-      >
-        <IconButton
-          aria-label="toggle theme"
-          icon={<Icon as={isDarkTheme ? MdLightMode : MdDarkMode} />}
-          onClick={colorMode.toggleColorMode}
-        />
-        <IconButton
-          as="a"
-          icon={<Icon as={GoMarkGithub} />}
-          aria-label="Github"
-          href="https://github.com/cod3rocket/iTourism"
-          target="_blank"
-        />
-      </ButtonGroup>
-      <Center as="main" w="full">
-        <VStack>
-          <Heading>Hello World!</Heading>
-          <Text>News coming soon...</Text>
-          <Progress w="full" h="2" size="xl" value={64} isAnimated hasStripe />
+
+      <VStack w="100%">
+        <Header />
+        <Flex
+          px="8"
+          pt="12"
+          pb="4"
+          w="1000px"
+          flexDir={{ base: 'column', lg: 'row' }}
+          justify="space-between"
+          align="center"
+        >
+          <Flex
+            w={{ base: '75%', lg: '50%' }}
+            flexDir="column"
+            align={{ base: 'center', lg: 'start' }}
+          >
+            <Flex gap="4" maxW="sm" flexDir="column">
+              <Heading
+                textAlign={{ base: 'center', lg: 'start' }}
+                as="h1"
+                fontSize="xxx-large"
+                color="#ededed"
+              >
+                {l.heading.title}
+              </Heading>
+              <Text textAlign={{ base: 'center', lg: 'start' }} color="#a8a8b3">
+                {l.heading.subtitle}
+              </Text>
+            </Flex>
+
+            <Box w="min-content">
+              <Link href="https://static.itourism.app/download/android.apk">
+                <Button
+                  colorScheme="blackAlpha"
+                  pl="-4"
+                  pr="-4"
+                  bgColor="transparent"
+                  mt="4"
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                  gap="2"
+                  opacity="0.8"
+                  color="#ededed"
+                  _hover={{
+                    opacity: '1',
+                  }}
+                >
+                  <Text fontSize="xl">Download</Text>
+                  <Icon fontSize="lg" as={HiChevronDoubleRight} />
+                </Button>
+              </Link>
+              <Box h="1px" w="full" bgColor="#323238" />
+            </Box>
+          </Flex>
+
+          <Flex
+            w="50%"
+            h="326"
+            align="center"
+            justify="center"
+            overflow="hidden"
+            mt={{ base: '16', lg: '0' }}
+            px={{ base: '16', sm: '0' }}
+          >
+            <NextImage
+              src="/assets/mock_app_image.png"
+              width="429"
+              height="326"
+              quality={100}
+              priority
+            />
+          </Flex>
+        </Flex>
+      </VStack>
+
+      <Box w="100%" id="features" my="2">
+        <VStack w="full">
+          <SimpleGrid
+            my={{ base: '2', lg: '16' }}
+            px="8"
+            w="1000px"
+            columns={{ base: 1, lg: 3 }}
+            gap={{ base: '12', lg: '16' }}
+            justifyContent="space-between"
+            alignItems="start"
+          >
+            <InfoCard
+              icon={FaCity}
+              title={l.features.title.first}
+              text={l.features.infoText.first}
+            />
+            <InfoCard
+              icon={MdPeopleAlt}
+              title={l.features.title.second}
+              text={l.features.infoText.second}
+            />
+            <InfoCard
+              icon={AiFillMessage}
+              title={l.features.title.third}
+              text={l.features.infoText.third}
+            />
+            <InfoCard
+              icon={FaMapMarked}
+              title={l.features.title.fourth}
+              text={l.features.infoText.fourth}
+            />
+            <InfoCard
+              icon={BsShieldFillCheck}
+              title={l.features.title.fifth}
+              text={l.features.infoText.fifth}
+            />
+            <InfoCard
+              icon={FaHandshake}
+              title={l.features.title.sixth}
+              text={l.features.infoText.sixth}
+            />
+          </SimpleGrid>
         </VStack>
-      </Center>
-      <Center
-        as="footer"
-        w="full"
-        bg={isDarkTheme ? 'gray.600' : 'gray.200'}
-        p="8"
-      >
-        <Text>
-          Proudly made with <Icon as={RiHeartFill} color="red.500" /> by{' '}
-          <Link
-            href="https://github.com/henriq4"
-            color={isDarkTheme ? 'purple.200' : 'purple.500'}
-            isExternal
-          >
-            henriq4
-          </Link>{' '}
-          and{' '}
-          <Link
-            href="https://github.com/eduardoteles17"
-            color={isDarkTheme ? 'purple.200' : 'purple.500'}
-            isExternal
-          >
-            eduardoteles17
-          </Link>
-        </Text>
-      </Center>
-    </VStack>
+      </Box>
+
+      <Box w="100%" id="contact">
+        <VStack w="full" px="8">
+          <CellPhone />
+        </VStack>
+      </Box>
+
+      <Footer />
+    </>
   );
 }
 

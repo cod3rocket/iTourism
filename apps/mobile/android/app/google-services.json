@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "788455666315",
+    "project_id": "cod3rocket-itourism",
+    "storage_bucket": "cod3rocket-itourism.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788455666315:android:0b84bb8af2bf87664cda8e",
+        "android_client_info": {
+          "package_name": "app.itourism.itourism_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788455666315-nblo98bf6pn27dfa7pi6g4hk65vrl0pn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXLNSDmHFslmviz6Jqmg2ofLL27NO9WsM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788455666315-nblo98bf6pn27dfa7pi6g4hk65vrl0pn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

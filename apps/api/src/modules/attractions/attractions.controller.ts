@@ -38,8 +38,8 @@ export class AttractionsController {
     );
   }
 
-  @Get()
+  @Get(':id')
   async findById(@Param(':id') id: string): Promise<AttractionModel> {
-    return this.attractionsService.findOneById(id);
+    return this.attractionsService.findById(id);
   }
 }
