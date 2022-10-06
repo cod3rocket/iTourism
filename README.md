@@ -43,6 +43,50 @@ públicas, agenda de eventos e pontos turísticos.
 - 🚀 Cross-platform (Android, iOS, Web)
 - 🌎 Suporte a múltiplas linguagens
 
+# Ferramentas utilizadas
+
+<div style="display: inline_block"><br>
+
+<a href="https://www.typescriptlang.org/" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+alt="Typescript" width="40" height="40"/>
+</a>
+<a href="https://dart.dev/" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
+alt="Dart" width="40" height="40"/>
+</a>
+<a href="https://flutter.dev/" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+alt="Flutter" width="40" height="40"/>
+</a>
+<a href="https://pt-br.reactjs.org/" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+alt="React.js" width="40" height="40"/>
+</a>
+<a href="https://nextjs.org/" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+alt="Next.js" width="40" height="40"/>
+</a>
+<a href="https://nestjs.com/" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg"
+alt="Nest.js" width="40" height="40"/>
+</a>
+<a href="https://www.docker.com/" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+alt="Docker" width="40" height="40"/>
+</a>
+<a href="https://www.postgresql.org/" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+alt="PostgreSql" width="40" height="40"/>
+</a>
+<a href="https://aws.amazon.com/pt/" target="_blank">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
+alt="Aws" width="40" height="40"/>
+</a>
+</div>
+
+<br />
+
 # Como contribuir
 
 ## Requerimentos
