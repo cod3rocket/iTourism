@@ -32,6 +32,12 @@ públicas, agenda de eventos e pontos turísticos.
   </a>
 </h3>
 
+<div align="center">
+  <img src="./assets/readme/first_page_app.jpeg" width="288px" height="640px">
+  <img src="./assets/readme/hotel_app.jpeg" width="288px" height="640px">
+  <img src="./assets/readme/first_page_app.gif" width="288px" height="640px">
+</div>
+
 # Funcionalidades
 
 - 🚀 Cross-platform (Android, iOS, Web)
