@@ -4,10 +4,15 @@
   <img src="./assets/branding/cod3rocket_logo.png" />
 </p>
 
-<h1 align="center">iTourism</h1>
+<h1 align="center">Front-end Hackathon 2022</h1>
 
 <p align="center">
-The guide will contain information about the main tourist attractions, hotels, restaurants, shops and other commercial establishments in the city.
+Projeto desenvolvido para o Front-end Hackathon, em parceria com a prefeitura do
+município de Bandeirantes-PR e a Universidade Estadual do Norte do Paraná
+[UENP](https://uenp.edu.br). O projeto foi desenvolvido voltado ao publico
+turístico da região, no site e no aplicativo podemos obter algumas informações
+da cidade como: restaurantes, hoteis, bares, locais de lazer, utilidades
+públicas, agenda de eventos e pontos turísticos.
 </p>
 
 <h3 align="center">
@@ -27,14 +32,14 @@ The guide will contain information about the main tourist attractions, hotels, r
   </a>
 </h3>
 
-# Features
+# Funcionalidades
 
-- 🚀 Cross-platform (Android, iOS)
-- 🌎 Languages and custom languages
+- 🚀 Cross-platform (Android, iOS, Web)
+- 🌎 Suporte a múltiplas linguagens
 
-# How to use
+# Como contribuir
 
-## Requirements
+## Requerimentos
 
 - [docker](https://docs.docker.com/get-docker/) >= 20.10.0
 - [docker-compose](https://docs.docker.com/compose/install/) >= 1.29
@@ -44,21 +49,21 @@ The guide will contain information about the main tourist attractions, hotels, r
 - [flutter](https://flutter.dev/docs/get-started/install) >= 3.0.0
 - [melos](https://melos.invertase.dev/getting-started) >= 2.6.0
 
-## Getting started
+## Começando com o código
 
-### 1. Clone the repository
+### 1. Clonar o repositório
 
 ```bash
 git clone https://github.com/cod3rocket/iTourism.git
 ```
 
-### 2. Install dependencies
+### 2. Instalar as dependências
 
 ```bash
 pnpm install
 ```
 
-### 3. Edit the .env file
+### 3. Editar o arquivo .env
 
 ```bash
 cd apps/api
@@ -68,19 +73,19 @@ cp .env.example .env
 cd ../..
 ```
 
-### 4. Run the bootstrap script
+### 4. Executar o script de bootstrap
 
 ```bash
 pnpm bootstrap
 ```
 
-### 5. Run the project
+### 5. Executar o projeto
 
 ```bash
 just start
 ```
 
-### 6. Run database migrations and populate database
+### 6. Executar as migrations e popular a database
 
 ```bash
 cd apps/api
@@ -90,7 +95,7 @@ pnpm prisma migrate dev
 pnpm prisma db seed
 ```
 
-## Authors
+## Autores
 
 |[<img src="https://github.com/henriq4.png?size=150" width=150><br><sub>@henriq4</sub>](https://github.com/henriq4) | [<img src="https://github.com/eduardoteles17.png?size=150" width=150><br><sub>@eduardoteles17</sub>](https://github.com/eduardoteles17) |
 |-|-|
